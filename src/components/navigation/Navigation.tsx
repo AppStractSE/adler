@@ -13,7 +13,9 @@ const NavigationLink = ({ href, label, isActive, isScrolled }: NavItem) => (
     ${
       isScrolled
         ? `${isActive ? `${styles.active} scroll+active` : "scroll-active"}`
-        : `${isActive ? `${styles.active} nonscroll+active` : "nonscroll-active"}`
+        : `${
+            isActive ? `${styles.active} nonscroll+active` : "nonscroll-active"
+          }`
     }`}
   >
     {label}
@@ -39,9 +41,11 @@ const Navigation = () => {
     ${isScrolled ? "bg-black" : "bg-transparent"}
     `}
     >
-      <div className="rounded bg-black h-fit w-fit p-2">logo</div>
+      {/* <div className="rounded bg-black h-fit w-fit p-2">logo</div> */}
       <nav
-        className={`flex gap-4 transition-all duration-500 ease-in-out ${isScrolled ? "" : "py-4"}`}
+        className={`flex gap-4 transition-all duration-500 ease-in-out ${
+          isScrolled ? "" : "py-4"
+        }`}
       >
         {navItems.map(({ href, label }) => (
           <NavigationLink
