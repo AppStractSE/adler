@@ -10,7 +10,7 @@ export default function Home() {
             </h1>
 
             <h5 className="text-lg font-medium md:w-full md:text-xl">
-              Välkommen till TC Elservice – där &quot;Vi har lösningen&quot; är
+              Välkommen till TC ELSERVICE – där &quot;Vi har lösningen&quot; är
               mer än bara en slogan; det är vår garanti till dig!
             </h5>
             <h4>

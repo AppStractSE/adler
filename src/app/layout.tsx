@@ -6,8 +6,18 @@ import Footer from "@/components/footer/Footer";
 import Main from "@/components/Main";
 
 export const metadata: Metadata = {
-  title: "TC Elservice",
-  description: "TC Elservice - Vi har lösningen!",
+  title: "TC ELSERVICE Örebro - Vi har lösningen!",
+  description:
+    "Upptäck Örebros egna TC ELSERVICE, en personligt driven elektrikerverksamhet med rikstäckande service. Med en passion för kvalitet, snabbhet och tillförlitlighet, erbjuder vi skräddarsydda eltjänster för både hem och företag över hela Sverige. Oavsett ditt behov – från små reparationer till stora projekt – är vår flexibilitet och expertis din garanti för ett professionellt resultat. Kontakta oss för en lösning som lyser upp din vardag.",
+  openGraph: {
+    type: "website",
+    locale: "sv_SE",
+    url: "https://tc-elelservice.se",
+    siteName: "TC ELSERVICE",
+  },
+  alternates: {
+    canonical: "https://tc-elservice.se",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
