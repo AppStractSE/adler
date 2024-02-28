@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
           <div className="space-y-8">
             <Link href="/">
-              TC Elservice
+              TC ELSERVICE
               {/* <img
                 src="/popeye.png"
                 alt="TC Elservice"
