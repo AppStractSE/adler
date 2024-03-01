@@ -1,9 +1,9 @@
+import Main from "@/components/Main";
+import Footer from "@/components/footer/Footer";
 import Navigation from "@/components/navigation/Navigation";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import "./globals.scss";
-import Footer from "@/components/footer/Footer";
-import Main from "@/components/Main";
 
 export const metadata: Metadata = {
   title: "TC ELSERVICE Örebro - Vi har lösningen!",
