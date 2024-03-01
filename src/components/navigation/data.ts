@@ -5,11 +5,11 @@ export interface NavItem {
 
 export const navigation: NavItem[] = [
   {
-    href: "/trana",
-    label: "Träna",
+    href: "/tjanster",
+    label: "Tjänster",
   },
   {
-    href: "/vart-gym",
-    label: "Vårt gym",
+    href: "/om",
+    label: "Om",
   },
 ];
