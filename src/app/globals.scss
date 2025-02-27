@@ -2,22 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-vanilla-powder-600;
-  }
+:root {
+  --primary-color: 27 27 27;
+  --secondary-color: 53 53 53;
+  --background-color: 255 255 255;
+  --foreground-color: 23 23 23;
+  --accent-color: 46 184 0;
+  --max-page-width: 1320px;
+  --border-radius-button: 4px;
+  --border-radius-general: 0.5rem;
 }
 
 body {
-  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  font-size: 18px;
 }
 
-@layer components {
-  .header {
-    >div {
-      @apply flex items-center justify-between max-w-6xl mx-auto;
-    }
+body::-webkit-scrollbar {
+  display: none;
+}
 
-    @apply fixed top-0 z-10 w-full border-b bg-vanilla-powder-500 px-4 text-night-500 shadow-md;
+.max-page-width {
+  max-width: var(--max-page-width);
+  @apply mx-auto container;
+}
+
+.max-hero-width {
+  max-width: calc(var(--max-page-width) + 100px);
+  @apply mx-auto;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+section:not(:first-of-type) {
+  animation: fadeIn 1s;
+  animation-fill-mode: both;
+}
+
+@for $i from 1 through 50 {
+  section:nth-of-type(#{$i}) {
+    animation-delay: $i * 0.25s;
   }
 }

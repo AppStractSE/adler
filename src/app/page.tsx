@@ -1,42 +1,48 @@
-import { HiOutlinePhone } from "react-icons/hi";
-import { IoMailOutline } from "react-icons/io5";
+import HeroSection from "@/components/sections/HeroSection";
+import ServicePopupSection from "@/components/sections/ServicePopupSection";
+import RotSection from "@/components/sections/RotSection";
+import ServicesSection from "@/components/sections/ServicesSection";
+import TwoPaneSection from "@/components/sections/TwoPaneSection";
 
 export default function Home() {
   return (
-    <section className="relative flex w-full items-center bg-[url('/hero-header.png')] bg-cover bg-bottom px-4 md:min-h-[85vh] justify-center">
-      <div className="relative mx-auto max-w-3xl flex-1 space-y-12 py-24">
-        <div className="space-y-4">
-          <h1 className="text-3xl font-bold text-black md:text-5xl text-center">
-            🚧 Sida under uppbyggnad 🚧
-          </h1>
-
-          <h5 className="text-lg font-medium md:w-full md:text-xl text-center">
-            &quot;Vi har lösningen&quot; är mer än bara en slogan; det är vår garanti till dig!
-          </h5>
-          <h4 className="text-lg font-medium md:w-full text-center text-balance">
-            Medan vår digitala plattform för närvarande genomgår en spännande förvandling, vill vi
-            försäkra dig om att vårt åtagande att erbjuda toppklassiga el-tjänster är konstant.
-          </h4>
-          <div className="flex flex-col gap-2 mx-auto justify-center items-center">
-            <div className="flex flex-col gap-2 mx-auto">
-              <a
-                href="tel:+46706069668"
-                className="inline-flex w-fit items-center gap-2 hover:underline hover:underline-offset-4"
-              >
-                <HiOutlinePhone />
-                070-606 96 68
-              </a>
-              <a
-                href="mailto:info@tc-elservice.se"
-                className="inline-flex w-fit items-center gap-2 hover:underline hover:underline-offset-4"
-              >
-                <IoMailOutline />
-                info@tc-elservice.se
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <>
+      <HeroSection
+        className={`bg-[url('/hero-image.webp')] bg-cover bg-center bg-no-repeat`}
+      />
+      <ServicePopupSection className="-mt-12 overflow-hidden border-b md:-mt-20" />
+      <TwoPaneSection
+        rtl
+        button={{
+          href: "/offertforfragan",
+          text: "Skaffa dig ett smart hem",
+        }}
+        className="border-b"
+        image="/image001.webp"
+        title="Drömmer du om ett smart hem?"
+        text={`Vi installerar smarta el- och styrsystem som sparar tid, pengar och energi, oavsett projektets storlek. Med våra lösningar får du ökad säkerhet, lägre energikostnader och en vardag som blir både smartare och enklare.`}
+      />
+      <ServicesSection className="border-b" />
+      <TwoPaneSection
+        button={{
+          href: "/tjanster",
+          text: "Läs mer om laddbox",
+        }}
+        className="border-b"
+        image="/image002.webp"
+        title="Nyfiken på laddbox?"
+        text={`Planera och övervaka din laddning för att alltid ha tillräckligt med ström när du behöver det. Den hjälper också till att minimera din elräkning genom att ladda när elpriset är lägst.\n\nEn installation av en elbilsladdare är enkel och snabb. Du kan ansluta laddboxen till din elmätare och ställa in ditt laddningsschema med hjälp av den intuitiva appen.`}
+      />
+      <RotSection
+        button={{
+          href: "/rotavdrag",
+          text: "Räkna ut ROT-avdrag",
+        }}
+        className="bg-cyan-950 text-background"
+        image="/image002.webp"
+        title="Hur räknar jag ut ROT-avdrag?"
+        text={`Planera och utnyttja rotavdraget för att minska kostnaderna för dina elinstallationer vid renovering eller nybyggnation. Våra lösningar säkerställer ett effektivt utförande, där du enkelt kan dra nytta av skatteavdraget för ett ekonomiskt resultat.`}
+      />
+    </>
   );
 }

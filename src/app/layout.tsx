@@ -1,31 +1,73 @@
-import Main from "@/components/Main";
 import Footer from "@/components/footer/Footer";
-import Navigation from "@/components/navigation/Navigation";
-import type { Metadata } from "next";
-import { ReactNode } from "react";
+import Header from "@/components/header/Header";
+import InitializeTheme from "@/components/InitializeTheme";
+import { Metadata, Viewport } from "next";
+import { DM_Sans } from "next/font/google";
+import { Toaster } from "react-hot-toast";
 import "./globals.scss";
 
+const DMSans = DM_Sans({
+  variable: "--font-DM_Sans",
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "TC ELSERVICE Örebro - Vi har lösningen!",
-  description:
-    "Upptäck Örebros egna TC ELSERVICE, en personligt driven elektrikerverksamhet med rikstäckande service. Med en passion för kvalitet, snabbhet och tillförlitlighet, erbjuder vi skräddarsydda eltjänster för både hem och företag över hela Sverige. Oavsett ditt behov – från små reparationer till stora projekt – är vår flexibilitet och expertis din garanti för ett professionellt resultat. Kontakta oss för en lösning som lyser upp din vardag.",
+  metadataBase: new URL("https://dev.tc-elservice.se"),
+  title: {
+    template: "%s | TC Elservice",
+    default: "Vi har lösningen | TC Elservice",
+  },
   openGraph: {
-    type: "website",
+    title: "TC Elservice",
+    description: "Vi har lösningen",
+    url: "/",
+    siteName: "TC Elservice",
+    images: [
+      {
+        url: "/hero-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "TC Elservice - Vi har lösningen",
+      },
+    ],
     locale: "sv_SE",
-    url: "https://tc-elelservice.se",
-    siteName: "TC ELSERVICE",
+    type: "website",
   },
-  alternates: {
-    canonical: "https://tc-elservice.se",
+  twitter: {
+    card: "summary_large_image",
+    site: "@",
+    title: "TC Elservice",
+    images: [
+      {
+        url: "/hero-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "TC Elservice - Vi har lösningen",
+      },
+    ],
+    description: "Vi har lösningen",
   },
+  robots: "max-image-preview:large",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export const viewport: Viewport = {
+  themeColor: "#fdfbf5",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="sv">
-      <body>
-        <Navigation />
-        <Main>{children}</Main>
+      <body
+        className={`${DMSans.className} bg-background text-primary antialiased`}
+      >
+        <InitializeTheme />
+        <Toaster />
+        <Header />
+        <main>{children}</main>
         <Footer />
       </body>
     </html>
