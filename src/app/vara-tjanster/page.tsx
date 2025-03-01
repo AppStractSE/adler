@@ -1,5 +1,6 @@
-import ServicesSection from "@/components/sections/ServicesSection";
 import SubPageHeroSection from "@/components/sections/SubPageHeroSection";
+import TwoPaneSection from "@/components/sections/TwoPaneSection";
+import { content } from "@/data/content";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -43,7 +44,20 @@ export default function Page() {
         title="Våra tjänster"
         text="Elektriker i Lindesberg"
       />
-      <ServicesSection />
+      {content.services.map((service, index) => (
+        <TwoPaneSection
+          rtl={index % 2 === 0}
+          key={index}
+          button={{
+            href: service.id,
+            text: "Läs mer",
+          }}
+          className={index === content.services.length - 1 ? "" : "border-b"}
+          image={service.image}
+          title={service.title}
+          text={service.description}
+        />
+      ))}
     </>
   );
 }
