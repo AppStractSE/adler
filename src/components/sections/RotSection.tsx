@@ -1,5 +1,4 @@
 import Button from "@/components/buttons/Button";
-import { ArrowRight } from "lucide-react";
 import { twMerge } from "tailwind-merge";
 
 interface Props {
@@ -18,22 +17,23 @@ const RotSection = ({ title, text, button, className }: Props) => {
     <section className={className}>
       <div
         className={twMerge(
-          "max-page-width grid justify-center gap-8 px-4 py-12 md:gap-12 md:py-24 lg:max-w-screen-lg lg:grid-cols-2",
+          "max-page-width flex flex-col items-center justify-center gap-8 px-4 py-12 md:gap-12 md:py-24 lg:max-w-screen-lg",
         )}
       >
         <div className={twMerge("flex flex-col gap-6 md:gap-8")}>
-          <h3 className="text-3xl font-semibold tracking-wide sm:text-3xl md:text-4xl">
+          <h3 className="text-center font-semibold tracking-wide sm:text-3xl md:text-4xl">
             {title}
           </h3>
-          <p className="whitespace-pre-line text-base md:text-lg">{text}</p>
+          <p className="whitespace-pre-line text-balance text-center text-lg md:text-lg">
+            {text}
+          </p>
         </div>
         {button && (
-          <div className="flex items-center justify-start lg:justify-end">
+          <div className="flex items-center">
             <Button
               href={button.href}
               text={button.text}
-              className="min-w-fit bg-background px-8 text-primary hover:bg-background/90 md:text-lg"
-              icon={<ArrowRight size={20} />}
+              className="min-w-fit text-background px-8 bg-primary hover:bg-primary/90 md:text-lg"
             />
           </div>
         )}

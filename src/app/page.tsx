@@ -1,6 +1,6 @@
 import HeroSection from "@/components/sections/HeroSection";
-import ServicePopupSection from "@/components/sections/ServicePopupSection";
 import RotSection from "@/components/sections/RotSection";
+import ServicePopupSection from "@/components/sections/ServicePopupSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TwoPaneSection from "@/components/sections/TwoPaneSection";
 
@@ -25,7 +25,7 @@ export default function Home() {
       <ServicesSection className="border-b" />
       <TwoPaneSection
         button={{
-          href: "/tjanster",
+          href: "/vara-tjanster/laddbox",
           text: "Läs mer om laddbox",
         }}
         className="border-b"
@@ -38,7 +38,7 @@ export default function Home() {
           href: "/rotavdrag",
           text: "Räkna ut ROT-avdrag",
         }}
-        className="bg-cyan-950 text-background"
+        className="border-b"
         image="/image002.webp"
         title="Hur räknar jag ut ROT-avdrag?"
         text={`Planera och utnyttja rotavdraget för att minska kostnaderna för dina elinstallationer vid renovering eller nybyggnation. Våra lösningar säkerställer ett effektivt utförande, där du enkelt kan dra nytta av skatteavdraget för ett ekonomiskt resultat.`}

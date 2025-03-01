@@ -55,8 +55,8 @@ export const content = {
       image: "/image003.webp",
     },
     {
-      id: "laddboxar",
-      title: "Laddboxar",
+      id: "laddbox",
+      title: "Laddbox",
       description:
         "Vi installerar laddboxar för elbilar, både för privatpersoner och företag.",
       image: "/image004.webp",

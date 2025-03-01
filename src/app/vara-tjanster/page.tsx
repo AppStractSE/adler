@@ -49,7 +49,7 @@ export default function Page() {
           rtl={index % 2 === 0}
           key={index}
           button={{
-            href: service.id,
+            href: "/vara-tjanster/"+ service.id,
             text: "Läs mer",
           }}
           className={index === content.services.length - 1 ? "" : "border-b"}
