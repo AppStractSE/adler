@@ -16,6 +16,7 @@ const mainLinks: DrawerLink[] = [
     href: "/vara-tjanster",
     label: "Våra tjänster",
   },
+  { href: "/rotavdrag", label: "Rotavdrag" },
   { href: "/offertforfragan", label: "Offertförfrågan" },
 ];
 

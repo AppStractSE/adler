@@ -9,6 +9,7 @@ const Footer = () => {
     { name: "Tidigare projekt", href: "/projekt" },
     { name: "Om TC Elservice", href: "/om-oss" },
     { name: "Våra tjänster", href: "/vara-tjanster" },
+    { name: "Räkna ut rotavdrag", href: "/rotavdrag" },
     { name: "Offertförfrågan", href: "/offertforfragan" },
   ];
   const currentYear = new Date().getFullYear();
