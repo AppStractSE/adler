@@ -13,7 +13,7 @@ const SubPageHeroSection = ({ title, text, className }: Props) => {
     <section
       className={twMerge(
         className,
-        "relative flex min-h-[70vh] items-end justify-start py-24",
+        "relative flex min-h-[70vh] items-end justify-start py-12 md:py-24",
       )}
     >
       <Image
