@@ -2,17 +2,15 @@ import Button from "@/components/buttons/Button";
 import { twMerge } from "tailwind-merge";
 
 interface Props {
-  image?: string;
   title: string;
   text: string;
-  rtl?: boolean;
   className?: string;
   button?: {
     href: string;
     text: string;
   };
 }
-const RotSection = ({ title, text, button, className }: Props) => {
+const CenterSection = ({ title, text, button, className }: Props) => {
   return (
     <section className={className}>
       <div
@@ -33,7 +31,7 @@ const RotSection = ({ title, text, button, className }: Props) => {
             <Button
               href={button.href}
               text={button.text}
-              className="min-w-fit text-background px-8 bg-primary hover:bg-primary/90 md:text-lg"
+              className="min-w-fit bg-primary px-8 text-background hover:bg-primary/90 md:text-lg"
             />
           </div>
         )}
@@ -42,4 +40,4 @@ const RotSection = ({ title, text, button, className }: Props) => {
   );
 };
 
-export default RotSection;
+export default CenterSection;

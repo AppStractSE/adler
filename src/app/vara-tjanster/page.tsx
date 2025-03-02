@@ -1,3 +1,4 @@
+import CenterSection from "@/components/sections/CenterSection";
 import SubPageHeroSection from "@/components/sections/SubPageHeroSection";
 import TwoPaneSection from "@/components/sections/TwoPaneSection";
 import { content } from "@/data/content";
@@ -49,15 +50,24 @@ export default function Page() {
           rtl={index % 2 === 0}
           key={index}
           button={{
-            href: "/vara-tjanster/"+ service.id,
+            href: "/vara-tjanster/" + service.id,
             text: "Läs mer",
           }}
-          className={index === content.services.length - 1 ? "" : "border-b"}
+          className="border-b"
           image={service.image}
           title={service.title}
           text={service.description}
         />
       ))}
+      <CenterSection
+        button={{
+          href: "/rotavdrag",
+          text: "Räkna ut ROT-avdrag",
+        }}
+        className="border-b"
+        title="Hur räknar jag ut ROT-avdrag?"
+        text={`Planera och utnyttja rotavdraget för att minska kostnaderna för dina elinstallationer vid renovering eller nybyggnation. Våra lösningar säkerställer ett effektivt utförande, där du enkelt kan dra nytta av skatteavdraget för ett ekonomiskt resultat.`}
+      />
     </>
   );
 }

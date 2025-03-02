@@ -1,5 +1,5 @@
+import CenterSection from "@/components/sections/CenterSection";
 import HeroSection from "@/components/sections/HeroSection";
-import RotSection from "@/components/sections/RotSection";
 import ServicePopupSection from "@/components/sections/ServicePopupSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TwoPaneSection from "@/components/sections/TwoPaneSection";
@@ -33,13 +33,12 @@ export default function Home() {
         title="Nyfiken på laddbox?"
         text={`Planera och övervaka din laddning för att alltid ha tillräckligt med ström när du behöver det. Den hjälper också till att minimera din elräkning genom att ladda när elpriset är lägst.\n\nEn installation av en elbilsladdare är enkel och snabb. Du kan ansluta laddboxen till din elmätare och ställa in ditt laddningsschema med hjälp av den intuitiva appen.`}
       />
-      <RotSection
+      <CenterSection
         button={{
           href: "/rotavdrag",
           text: "Räkna ut ROT-avdrag",
         }}
         className="border-b"
-        image="/image002.webp"
         title="Hur räknar jag ut ROT-avdrag?"
         text={`Planera och utnyttja rotavdraget för att minska kostnaderna för dina elinstallationer vid renovering eller nybyggnation. Våra lösningar säkerställer ett effektivt utförande, där du enkelt kan dra nytta av skatteavdraget för ett ekonomiskt resultat.`}
       />

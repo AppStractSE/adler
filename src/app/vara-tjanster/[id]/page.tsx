@@ -1,5 +1,7 @@
+import CenterSection from "@/components/sections/CenterSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import SubPageHeroSection from "@/components/sections/SubPageHeroSection";
+import TwoPaneSection from "@/components/sections/TwoPaneSection";
 import { content } from "@/data/content";
 // import { Metadata } from "next";
 import { redirect } from "next/navigation";
@@ -55,11 +57,27 @@ export default function Page({ params }: any) {
 
   return (
     <>
-      <SubPageHeroSection
-        title="Få en offert redan idag."
-        text={service.title}
+      <SubPageHeroSection title={service.description} text={service.title} />
+      <TwoPaneSection
+        className="border-b"
+        title={service.sellingPointTitle}
+        text={service.sellingPointDesc}
+        image={service.image}
+        button={{
+          href: "/offertforfragan",
+          text: "Jag vill ha en offert",
+        }}
       />
-      <ServicesSection />
+      <ServicesSection className="border-b" />
+      <CenterSection
+        button={{
+          href: "/rotavdrag",
+          text: "Räkna ut ROT-avdrag",
+        }}
+        className="border-b"
+        title="Du vet väl om att du kan nyttja ROT-avdrag hos oss?"
+        text={`Planera och utnyttja rotavdraget för att minska kostnaderna för dina elinstallationer vid renovering eller nybyggnation. Våra lösningar säkerställer ett effektivt utförande, där du enkelt kan dra nytta av skatteavdraget för ett ekonomiskt resultat.`}
+      />
     </>
   );
 }
