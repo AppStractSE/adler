@@ -6,7 +6,7 @@ export const content = {
     secondaryColor: "#353535",
     backgroundColor: "#fdfbf5",
     foregroundColor: "#171717",
-    accentColor: "#2EB800",
+    accentColor: "#22d3ee",
     maxPageWidth: "1320px",
   },
 

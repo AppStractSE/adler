@@ -29,7 +29,7 @@ const ServicesSection = ({ className }: Props) => {
           företag till industri och offentliga miljöer. Med vår expertis får du
           trygg och effektiv elservice, oavsett projektets storlek.
         </p>
-        <div className="mt-4 md:mt-12 grid w-full grid-cols-1 gap-x-4 gap-y-12 md:grid-cols-2 md:gap-x-8 lg:grid-cols-3">
+        <div className="mt-4 grid w-full grid-cols-1 gap-x-4 gap-y-12 md:mt-12 md:grid-cols-2 md:gap-x-8 lg:grid-cols-3">
           {content.services.slice(0, visibleCount).map((service, index) => (
             <div key={index} className="flex flex-col gap-6">
               <div className="relative aspect-[2/1] md:aspect-[1.75/1]">
