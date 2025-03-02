@@ -24,7 +24,7 @@ const RotavdragSection = () => {
         <div className={twMerge("flex basis-8/12 flex-col gap-12 md:gap-24")}>
           <div className="flex flex-col gap-4">
             <h3 className="text-2xl font-medium tracking-wide sm:text-3xl md:text-4xl">
-              Räkna ut ROT-avdrag här
+              Vad innebär ROT-avdraget?
             </h3>
             <p className="whitespace-pre-line text-base md:text-lg">
               Med ROT-avdraget kan du få upp till 50 000 kronor i
@@ -46,7 +46,7 @@ const RotavdragSection = () => {
               description="Antal personer som ansöker om ROT-avdraget."
               suffix="st"
               value={numPersons}
-              setValue={setNumPersons}
+              setValue={(value) => setNumPersons(value === 0 ? 1 : value)}
               min={0}
               max={2}
               step={1}
@@ -79,14 +79,23 @@ const RotavdragSection = () => {
               Resultat
             </h3>
             <p className="whitespace-pre-line text-base md:text-lg">
-              Med {numPersons} person(er) och en arbetskostnad på {workCost} kr
-              får du ett ROT-avdrag på {actualRot} kr. Detta innebär att du
-              endast betalar {discountedWorkCost} kr i arbetskostnad.
+              Med {numPersons} {numPersons < 2 ? "person" : "personer"} som
+              ansöker om ROT-avdrag och en arbetskostnad på{" "}
+              {workCost.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} kr får
+              du ett ROT-avdrag på{" "}
+              {actualRot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} kr.
+              Detta innebär att du endast betalar{" "}
+              {discountedWorkCost
+                .toString()
+                .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}{" "}
+              kr i arbetskostnad.
               <br />
               <br />
-              Totalt kommer du att betala {totalCost} kr för arbetskostnad och
-              materialkostnad. Detta innebär att du sparar {totalSavings} kr i
-              skattereduktion.
+              Totalt kommer du att betala{" "}
+              {totalCost.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} kr
+              för arbetskostnad och materialkostnad. Detta innebär att du sparar{" "}
+              {totalSavings.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} kr
+              i skattereduktion.
             </p>
             <Link
               href="offertforfragan"

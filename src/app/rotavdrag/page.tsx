@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <SubPageHeroSection title="Rotavdrag" text="Allt du förväntar dig" />
+      <SubPageHeroSection title="Rotavdrag" text="Räkna ut ROT-avdrag här" />
       <RotavdragSection />
     </>
   );
