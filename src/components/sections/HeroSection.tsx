@@ -33,13 +33,13 @@ const HeroSection = ({ className }: Props) => {
             </h1>
             <div className="mt-12 flex flex-wrap items-center gap-4">
               <Button
-                href="/kontakt"
+                href="/offertforfragan"
                 text="Kom i kontakt med oss"
                 className="min-w-fit bg-cyan-950 px-8 text-white hover:bg-cyan-900 md:text-lg"
                 icon={<ArrowRight size={20} />}
               />
               <Button
-                href="/tjanster"
+                href="/vara-tjanster"
                 text="Se våra tjänster"
                 className="min-w-fit bg-cyan-500 px-8 text-primary hover:bg-cyan-400 md:text-lg"
                 icon={<ArrowRight size={20} />}

@@ -12,7 +12,6 @@ const mainLinks: DrawerLink[] = [
   { href: "/", label: "Hem" },
   { href: "/projekt", label: "Projekt" },
   { href: "/om-oss", label: "Om oss" },
-  { href: "/kontakt", label: "Kontakt" },
   {
     href: "/vara-tjanster",
     label: "Våra tjänster",

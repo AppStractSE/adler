@@ -33,19 +33,26 @@ const Footer = () => {
           </div>
           <div className="flex min-w-fit flex-col gap-8">
             <h5 className="text-base">Kontakt</h5>
-            <div className="flex flex-col">
-              <div className="text-lg font-light md:text-lg">
-                Menuettvägen 2
-              </div>
-              <div className="text-lg font-light md:text-lg">
-                711 35 Lindesberg
-              </div>
-              <div className="text-lg font-light md:text-lg">
+            <div className="flex flex-col gap-2">
+              <Link
+                className="whitespace-pre-line text-lg font-light hover:text-cyan-500 md:text-lg"
+                href="https://www.google.com/maps/place/Menuettv%C3%A4gen+2,+711+35+Lindesberg/@59.6101962,15.2085963,17z/data=!3m1!4b1!4m6!3m5!1s0x465c4c00a46db49d:0xf74edb0b14e827de!8m2!3d59.6101935!4d15.2111712!16s%2Fg%2F11c4ymwmlq?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+              >
+                {`Menuettvägen 2\n711 35 Lindesberg`}
+              </Link>
+              <Link
+                className="text-lg font-light hover:text-cyan-500 md:text-lg"
+                href={`tel:${content.company.phone}`}
+              >
                 {content.company.phone}
-              </div>
-              <div className="text-lg font-light md:text-lg">
+              </Link>
+              <Link
+                className="text-lg font-light hover:text-cyan-500 md:text-lg"
+                href={`mailto:${content.company.email}`}
+              >
                 {content.company.email}
-              </div>
+              </Link>
             </div>
           </div>
           <div className="flex min-w-fit flex-col gap-8">
@@ -55,6 +62,7 @@ const Footer = () => {
                 <Link
                   key={social.href}
                   href={social.href}
+                  target="_blank"
                   className="flex w-fit items-center gap-2 text-lg font-light hover:text-cyan-500 md:text-lg"
                 >
                   <ArrowUpRight size={16} />

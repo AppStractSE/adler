@@ -50,7 +50,7 @@ const ServicesSection = ({ className }: Props) => {
                 </p>
               </div>
               <Link
-                href="/"
+                href={`/vara-tjanster/${service.id}`}
                 className="flex w-fit items-center gap-2 transition-all duration-200 ease-in-out hover:gap-3 hover:text-cyan-500"
               >
                 <ArrowRight size={18} />

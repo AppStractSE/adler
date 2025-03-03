@@ -61,18 +61,22 @@ const ServicePopupSection = ({ className }: Props) => {
     {
       title: "Elinstallationer",
       text: "Vi utför alla typer av elinstallationer, från mindre servicejobb till större entreprenader.",
+      href: "elinstallation",
     },
     {
       title: "Laddbox",
       text: "Vi installerar laddboxar för elbilar, både för privatpersoner och företag.",
+      href: "laddbox",
     },
     {
       title: "Belysning",
       text: "Vi hjälper dig med allt inom belysning, från installation till reparation.",
+      href: "belysning",
     },
     {
       title: "Service",
       text: "Vi utför service och reparationer av elanläggningar.",
+      href: "service",
     },
   ];
 
@@ -90,7 +94,7 @@ const ServicePopupSection = ({ className }: Props) => {
               {services.map((service, index) => (
                 <SplideSlide key={index}>
                   <Link
-                    href="/"
+                    href={`/vara-tjanster/${service.href}`}
                     className="group flex min-h-[300px] flex-col gap-4 rounded-lg bg-white px-6 py-8 text-black shadow transition-all duration-200 ease-in-out hover:-translate-y-1 hover:outline hover:outline-1 hover:outline-cyan-500"
                   >
                     <h3 className="text-xl">{service.title}</h3>

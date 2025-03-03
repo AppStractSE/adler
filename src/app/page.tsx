@@ -14,7 +14,7 @@ export default function Home() {
       <TwoPaneSection
         rtl
         button={{
-          href: "/offertforfragan",
+          href: "/vara-tjanster/belysning",
           text: "Skaffa dig ett smart hem",
         }}
         className="border-b"
