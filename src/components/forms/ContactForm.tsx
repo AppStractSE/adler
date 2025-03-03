@@ -6,12 +6,25 @@ import toast from "react-hot-toast";
 import { twMerge } from "tailwind-merge";
 import Spinner from "../loaders/Spinner";
 
+import { content } from "@/data/content";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
+
 const ContactForm = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const {
     register,
     handleSubmit,
     reset,
+    setValue,
+    watch,
     formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
@@ -26,7 +39,7 @@ const ContactForm = () => {
 
   function generateEmailHTML(data: IContactForm) {
     const formattedMessage = data.Message.replace(/\n/g, "<br>");
-    return `<div><p><strong>Namn:</strong></p><p>${data.FullName}</p><p><strong>Email:</strong></p><p><a href="mailto:${data.Email}">${data.Email}</a></p><p><strong>Telefon:</strong></p><p><a href="tel:${data.PhoneNumber}">${data.PhoneNumber}</a></p><p><strong>Meddelande:</strong></p><p>${formattedMessage}</p></div>`;
+    return `<div><p><strong>Namn:</strong></p><p>${data.FullName}</p><p><strong>Email:</strong></p><p><a href="mailto:${data.Email}">${data.Email}</a></p><p><strong>Telefon:</strong></p><p><a href="tel:${data.PhoneNumber}">${data.PhoneNumber}</a></p><p><strong>Intresserad av tjänst:</strong></p><p>${data.Service}</p><p><strong>Meddelande:</strong></p><p>${formattedMessage}</p></div>`;
   }
 
   const onSubmit = async (data: IContactForm) => {
@@ -75,7 +88,7 @@ const ContactForm = () => {
   };
 
   const baseClasses =
-    "w-full p-4 border-primary/25 shadow-sm rounded-md focus:outline-none border tracking-widest ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
+    "text-base w-full px-4 py-2.5 border-primary/25 shadow-sm rounded-md focus:outline-none border tracking-widest ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
 
   const errorClass =
     "outline outline-1 outline-offset-0 outline-red-500 placeholder:text-red-500";
@@ -200,26 +213,38 @@ const ContactForm = () => {
 
         <div className="flex flex-col gap-2">
           <label className="text-base" htmlFor="Service">
-            Service
+            Tjänst
           </label>
-          <input
-            className={twMerge(
-              baseClasses,
-              errors["Service"] ? errorClass : "",
-            )}
-            type="text"
+          <Select
             {...register("Service", {
-              required: "Fyll i service",
-              minLength: {
-                value: 2,
-                message: "Minst 2 tecken",
-              },
-              maxLength: {
-                value: 50,
-                message: "Max 50 tecken",
-              },
+              required: "Välj en tjänst",
             })}
-          />
+            onValueChange={(value) =>
+              setValue("Service", value, { shouldValidate: true })
+            }
+            value={watch("Service")}
+          >
+            <SelectTrigger
+              className={twMerge(
+                baseClasses,
+                "rounded bg-white",
+                errors["Service"] ? errorClass : "",
+              )}
+            >
+              <SelectValue placeholder="Vad behöver du hjälp med?" />
+            </SelectTrigger>
+            <SelectContent className="rounded bg-white">
+              <SelectGroup>
+                <SelectLabel>Välj en tjänst</SelectLabel>
+                {content.services.map((service) => (
+                  <SelectItem value={service.title} key={service.id}>
+                    {service.title}
+                  </SelectItem>
+                ))}
+                <SelectItem value="Annat">Annat</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
           <p
             role="alert"
             className={twMerge(
