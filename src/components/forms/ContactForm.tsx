@@ -18,6 +18,7 @@ const ContactForm = () => {
       FullName: "",
       Email: "",
       PhoneNumber: "",
+      Service: "",
       Message: "",
     },
     mode: "onTouched",
@@ -32,6 +33,7 @@ const ContactForm = () => {
     const formData = {
       name: data.FullName,
       email: data.Email,
+      service: data.Service,
       subject: `Kontaktformulär - ${data.FullName}`,
       message: data.Message,
       messageHtml: generateEmailHTML(data),
@@ -73,7 +75,7 @@ const ContactForm = () => {
   };
 
   const baseClasses =
-    "w-full p-4 shadow-sm rounded-md focus:outline-none border tracking-widest ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
+    "w-full p-4 border-primary/25 shadow-sm rounded-md focus:outline-none border tracking-widest ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
 
   const errorClass =
     "outline outline-1 outline-offset-0 outline-red-500 placeholder:text-red-500";
@@ -90,14 +92,16 @@ const ContactForm = () => {
         name="contact-form"
       >
         <input type="hidden" name="required-field" value="contact-form" />
-        <div>
+        <div className="flex flex-col gap-2">
+          <label className="text-base" htmlFor="FullName">
+            För- och efternamn
+          </label>
           <input
             className={twMerge(
               baseClasses,
               errors["FullName"] ? errorClass : "",
             )}
             type="text"
-            placeholder="För- och efternamn*"
             {...register("FullName", {
               required: "Fyll i namn",
               minLength: {
@@ -123,11 +127,13 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <div>
+        <div className="flex flex-col gap-2">
+          <label className="text-base" htmlFor="Email">
+            E-postadress
+          </label>
           <input
             className={twMerge(baseClasses, errors["Email"] ? errorClass : "")}
             type="email"
-            placeholder="Email*"
             {...register("Email", {
               required: "Fyll i email",
               pattern: {
@@ -150,14 +156,16 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <div>
+        <div className="flex flex-col gap-2">
+          <label className="text-base" htmlFor="PhoneNumber">
+            Telefonnummer
+          </label>
           <input
             className={twMerge(
               baseClasses,
               errors["PhoneNumber"] ? errorClass : "",
             )}
             type="tel"
-            placeholder="Telefonnummer*"
             {...register("PhoneNumber", {
               onChange: (e) => {
                 e.target.value = e.target.value.replace(/[^0-9]/g, "");
@@ -190,17 +198,54 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <div>
+        <div className="flex flex-col gap-2">
+          <label className="text-base" htmlFor="Service">
+            Service
+          </label>
+          <input
+            className={twMerge(
+              baseClasses,
+              errors["Service"] ? errorClass : "",
+            )}
+            type="text"
+            {...register("Service", {
+              required: "Fyll i service",
+              minLength: {
+                value: 2,
+                message: "Minst 2 tecken",
+              },
+              maxLength: {
+                value: 50,
+                message: "Max 50 tecken",
+              },
+            })}
+          />
+          <p
+            role="alert"
+            className={twMerge(
+              errorTextBaseClass,
+              errors["Service"]
+                ? errorTextVisibleClasses
+                : errorTextHiddenClasses,
+            )}
+          >
+            {errors.Service?.message}
+          </p>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <label className="text-base" htmlFor="Message">
+            Meddelande
+          </label>
           <textarea
             maxLength={500}
-            placeholder="Målsättning. Vad behöver du hjälp med?*"
             className={twMerge(
               "h-64 resize-none whitespace-pre-line",
               baseClasses,
               errors["Message"] ? errorClass : "",
             )}
             {...register("Message", {
-              required: "Fyll i målsättning",
+              required: "Fyll i meddelande",
               minLength: {
                 value: 10,
                 message: "Minst 10 tecken",
@@ -227,7 +272,7 @@ const ContactForm = () => {
         <button
           disabled={isSubmitting || formSubmitted}
           type="submit"
-          className="ring-1 ring-background inline-flex w-full items-center justify-center rounded-md bg-primary/90 px-4 py-4 text-background backdrop-blur-sm hover:bg-primary"
+          className="inline-flex w-full items-center justify-center rounded-md bg-primary/90 px-4 py-4 text-background ring-1 ring-background backdrop-blur-sm hover:bg-primary"
         >
           {isSubmitting ? (
             <Spinner
@@ -259,7 +304,7 @@ const ContactForm = () => {
             Meddelande skickat!
           </h6>
           <p className="whitespace-pre-line text-balance text-xl lg:text-center lg:text-xl">
-            Tack! Vi återkommer så fort vi kan.
+            Tack! Vi återkopplar så fort vi kan.
           </p>
           <button
             onClick={() => setFormSubmitted(false)}
