@@ -83,13 +83,13 @@ const Footer = () => {
         </Link>
         <hr className="border-background/25" />
         <div className="flex flex-col justify-between gap-4 md:flex-row md:items-center">
-          <p className="text-xs font-semibold text-background/50">
+          <p className="text-xs font-medium text-background/50">
             © {currentYear} {content.company.name}. All rights reserved.
           </p>
           <a
             href="https://www.appstract.se"
             target="_blank"
-            className="text-xs font-semibold text-background/50 hover:underline"
+            className="text-xs font-medium text-background/50 hover:underline"
           >
             Web design by Appstract
           </a>

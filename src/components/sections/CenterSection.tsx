@@ -19,10 +19,10 @@ const CenterSection = ({ title, text, button, className }: Props) => {
         )}
       >
         <div className={twMerge("flex flex-col gap-6 md:gap-8")}>
-          <h3 className="text-center font-semibold tracking-wide sm:text-3xl md:text-4xl">
+          <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
             {title}
-          </h3>
-          <p className="whitespace-pre-line text-balance text-center text-lg md:text-lg">
+          </h2>
+          <p className="whitespace-pre-line text-balance text-center text-base md:text-lg">
             {text}
           </p>
         </div>

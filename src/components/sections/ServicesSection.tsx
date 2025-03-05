@@ -21,7 +21,7 @@ const ServicesSection = ({ className }: Props) => {
   return (
     <section className={className}>
       <div className="max-page-width flex flex-col items-center gap-4 px-4 py-12 md:gap-8 md:py-24">
-        <h2 className="text-balance text-center text-3xl font-semibold tracking-wide sm:text-4xl md:text-5xl">
+        <h2 className="text-balance text-center text-3xl font-medium tracking-wide sm:text-4xl md:text-5xl">
           Allt för ström & ljus
         </h2>
         <p className="max-w-3xl text-balance text-center text-lg leading-loose tracking-wider md:text-xl">
@@ -42,7 +42,7 @@ const ServicesSection = ({ className }: Props) => {
                 />
               </div>
               <div className="mb-auto flex flex-col gap-2">
-                <h3 className="text-balance text-xl font-semibold">
+                <h3 className="text-balance text-xl font-medium">
                   {service.title}
                 </h3>
                 <p className="text-base md:pr-4 md:text-lg">

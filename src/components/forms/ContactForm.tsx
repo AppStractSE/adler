@@ -325,7 +325,7 @@ const ContactForm = () => {
             formSubmitted ? "translate-y-0" : "translate-y-[125%]",
           )}
         >
-          <h6 className="text-3xl lg:text-center lg:text-2xl">
+          <h6 className="text-2xl lg:text-center md:text-3xl">
             Meddelande skickat!
           </h6>
           <p className="whitespace-pre-line text-balance text-xl lg:text-center lg:text-xl">

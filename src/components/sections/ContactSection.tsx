@@ -7,7 +7,7 @@ const ContactSection = () => {
     <section>
       <div className="max-page-width flex flex-col justify-between gap-12 px-4 py-12 md:flex-row md:gap-24 md:py-24">
         <div className="flex basis-6/12 flex-col gap-4">
-          <h3 className="text-2xl font-medium tracking-wide sm:text-3xl md:text-4xl">
+          <h3 className="text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
             Vill du få en offert?
           </h3>
           <p className="whitespace-pre-line text-base md:text-lg">
@@ -20,7 +20,7 @@ const ContactSection = () => {
             height={1080}
             width={1920}
             className={twMerge(
-              "aspect-[1.618/1] h-auto w-full max-w-full rounded-xl object-cover object-center mt-4",
+              "mt-4 aspect-[1.618/1] h-auto w-full max-w-full rounded-xl object-cover object-center",
             )}
           />
         </div>

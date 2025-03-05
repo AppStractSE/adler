@@ -25,10 +25,10 @@ const SubPageHeroSection = ({ title, text, className }: Props) => {
       />
       <div className="absolute inset-0 bg-primary/50"></div>
       <div className="max-page-width relative flex flex-col gap-8 px-4 text-background">
-        <h2 className="text-lg font-medium md:text-xl lg:w-1/2 text-balance">{title}</h2>
-        <p className="text-balance text-3xl tracking-wider md:text-5xl lg:w-1/2">
-          {text}
-        </p>
+        <h2 className="text-balance text-lg font-medium md:text-xl lg:w-1/2">
+          {title}
+        </h2>
+        <p className="text-4xl font-medium tracking-wide md:text-5xl">{text}</p>
       </div>
     </section>
   );
