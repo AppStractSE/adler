@@ -1,8 +1,14 @@
+import CardWithOverlay from "@/components/cards/CardWithOverlay";
+import CenteredSection from "@/components/sections/CenteredSection";
 import CenterSection from "@/components/sections/CenterSection";
 import HeroSection from "@/components/sections/HeroSection";
 import ServicePopupSection from "@/components/sections/ServicePopupSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TwoPaneSection from "@/components/sections/TwoPaneSection";
+import { content } from "@/data/content";
+import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
 export default function Home() {
   return (
@@ -22,6 +28,43 @@ export default function Home() {
         title="Drömmer du om ett smart hem?"
         text={`Vi installerar smarta el- och styrsystem som sparar tid, pengar och energi, oavsett projektets storlek. Med våra lösningar får du ökad säkerhet, lägre energikostnader och en vardag som blir både smartare och enklare.`}
       />
+      <CenteredSection className="border-b">
+        <div className="flex flex-col gap-6 md:gap-8">
+          <h2 className="w-full text-balance text-3xl font-medium tracking-wide sm:text-4xl md:text-5xl">
+            Några av våra tidigare projekt
+          </h2>
+          <p className="whitespace-pre-line text-balance text-base md:text-lg">
+            Nyfiken på vad vi har gjort tidigare? Här kan du se några av våra
+            tidigare projekt, där vi har hjälpt kunder med allt från solceller
+            och belysning till elinstallationer och nätverksinstallationer.
+          </p>
+        </div>
+        <div className="grid w-full grid-cols-1 grid-rows-1 items-start gap-4 md:grid-cols-2 md:gap-6 lg:gap-8">
+          {content.projects.slice(0, 3).map((project, index) => (
+            <CardWithOverlay
+              key={index}
+              href={"/projekt/"}
+              title={project.title}
+              subtitle="Projekt"
+              description={project.description}
+              image={project.image}
+              className={twMerge(
+                index == 2 ? "md:col-span-2" : "",
+                "max-h-[450px]",
+              )}
+            />
+          ))}
+        </div>
+        <Link
+          href="/projekt"
+          className="flex w-fit items-center gap-2 transition-all duration-200 ease-in-out hover:gap-3 hover:text-cyan-500"
+        >
+          <ArrowRight size={18} />
+          <p className="text-base font-medium underline underline-offset-4 md:text-lg">
+            Gå till projekt
+          </p>
+        </Link>
+      </CenteredSection>
       <ServicesSection className="border-b" />
       <TwoPaneSection
         button={{

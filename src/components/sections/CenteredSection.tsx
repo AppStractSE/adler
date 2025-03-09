@@ -9,7 +9,7 @@ const CenteredSection = ({ className, children }: Props) => {
     <section className={className}>
       <div
         className={twMerge(
-          "max-page-width w-full flex flex-col items-center gap-8 px-4 py-12 md:gap-12 md:py-24",
+          "max-page-width w-full flex flex-col items-center gap-6 px-4 py-12 md:gap-8 md:py-24",
         )}
           >
               {children}

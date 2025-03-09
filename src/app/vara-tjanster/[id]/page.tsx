@@ -3,7 +3,6 @@ import ServicesSection from "@/components/sections/ServicesSection";
 import SubPageHeroSection from "@/components/sections/SubPageHeroSection";
 import TwoPaneSection from "@/components/sections/TwoPaneSection";
 import { content } from "@/data/content";
-// import { Metadata } from "next";
 import { redirect } from "next/navigation";
 export async function generateStaticParams() {
   return content.services.map((service) => ({
@@ -13,7 +12,10 @@ export async function generateStaticParams() {
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function generateMetadata({ params }: any) {
-  const service = content.services.find((service) => service.id === params.id);
+  const param = await params;
+  const service = content.services.find(
+    (service) => service.id === param.id,
+  );
   if (!service) redirect("/404");
   return {
     title: service.title,
@@ -50,9 +52,13 @@ export async function generateMetadata({ params }: any) {
   };
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function Page({ params }: any) {
-  const service = content.services.find((service) => service.id === params.id);
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const param = await params;
+  const service = content.services.find((service) => service.id === param.id);
   if (!service) redirect("/404");
 
   return (
@@ -64,7 +70,12 @@ export default function Page({ params }: any) {
         text={service.sellingPointDesc}
         image={service.image}
         button={{
-          href: "/offertforfragan",
+          href: {
+            pathname: "/offertforfragan",
+            query: {
+              s: service.id,
+            },
+          },
           text: "Jag vill ha en offert",
         }}
       />

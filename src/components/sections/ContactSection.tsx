@@ -11,7 +11,7 @@ const ContactSection = () => {
             Vill du få en offert?
           </h3>
           <p className="whitespace-pre-line text-base md:text-lg">
-            {`Vad roligt att du är intresserad av våra tjänster! Fyll i formuläret nedan med dina uppgifter och en kort beskrivning av vad du behöver hjälp med. Vi går igenom din förfrågan så snart som möjligt och återkommer med en offert.\n\nNormalt återkopplar vi redan nästa arbetsdag. Vi ser fram emot att hjälpa dig!`}
+            {`Vad roligt att du är intresserad av våra tjänster! Fyll i formuläret med dina uppgifter och en kort beskrivning av vad du behöver hjälp med. Vi går igenom din förfrågan så snart som möjligt och återkommer med en offert.\n\nNormalt återkopplar vi redan nästa arbetsdag. Vi ser fram emot att hjälpa dig!`}
           </p>
           <Image
             quality={100}

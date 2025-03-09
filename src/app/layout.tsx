@@ -1,15 +1,10 @@
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
 import InitializeTheme from "@/components/InitializeTheme";
+import { DMSans } from "@/util/fonts";
 import { Metadata, Viewport } from "next";
-import { DM_Sans } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import "./globals.scss";
-
-const DMSans = DM_Sans({
-  variable: "--font-DM_Sans",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://dev.tc-elservice.se"),
@@ -54,7 +49,7 @@ export const viewport: Viewport = {
   themeColor: "#fdfbf5",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;

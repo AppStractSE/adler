@@ -6,8 +6,8 @@ import { twMerge } from "tailwind-merge";
 
 const RotavdragSection = () => {
   const [numPersons, setNumPersons] = useState(1);
-  const [workCost, setWorkCost] = useState(10000);
-  const [materialCost, setMaterialCost] = useState(5000);
+  const [workCost, setWorkCost] = useState(100000);
+  const [materialCost, setMaterialCost] = useState(50000);
 
   const maxRotPerPerson = 50000;
   const rotPercentage = 0.3;
@@ -18,12 +18,16 @@ const RotavdragSection = () => {
   const totalCost = discountedWorkCost + materialCost;
   const totalSavings = actualRot;
 
+  const formatCurrency = (value: string | number) => {
+    return value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+  };
+
   return (
     <section>
       <div className="max-page-width flex flex-col gap-12 px-4 py-12 md:flex-row md:gap-16 md:py-24 lg:gap-32">
         <div className={twMerge("flex basis-8/12 flex-col gap-12 md:gap-24")}>
-          <div className="flex flex-col gap-4">
-            <h3 className="text-2xl text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
+          <div className="flex flex-col gap-6 md:gap-8">
+            <h3 className="text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
               Vad innebär ROT-avdraget?
             </h3>
             <p className="whitespace-pre-line text-base md:text-lg">
@@ -34,7 +38,7 @@ const RotavdragSection = () => {
               {"\n\n"}Tänk dig att du har en arbetskostnad på 100 000 kronor –
               då kan du sänka din skatt med hela 30 000 kronor per person och
               år. Hantverkstjänster är perfekta för ROT-avdraget, eftersom
-              arbetskostnaderna ofta står för 85-90% av det totala priset,
+              arbetskostnaderna ofta står för merparten av det totala priset,
               vilket gör att du kan utnyttja avdraget nästintill maximalt. Vill
               du veta exakt hur mycket du kan spara? Testa vår kalkylator här
               nedanför och få svaret direkt!
@@ -74,28 +78,24 @@ const RotavdragSection = () => {
           </div>
         </div>
         <div className="w-full basis-4/12 md:relative">
-          <div className="flex flex-col gap-4 md:sticky md:top-24">
-            <h3 className="text-2xl text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
+          <div className="flex flex-col gap-6 md:sticky md:top-24 md:gap-8">
+            <h3 className="text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
               Resultat
             </h3>
             <p className="whitespace-pre-line text-base md:text-lg">
               Med {numPersons} {numPersons < 2 ? "person" : "personer"} som
               ansöker om ROT-avdrag och en arbetskostnad på{" "}
-              {workCost.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} kr får
-              du ett ROT-avdrag på{" "}
-              {actualRot.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} kr.
-              Detta innebär att du endast betalar{" "}
-              {discountedWorkCost
-                .toString()
-                .replace(/\B(?=(\d{3})+(?!\d))/g, " ")}{" "}
-              kr i arbetskostnad.
+              {formatCurrency(workCost)} kr får du ett ROT-avdrag på{" "}
+              {formatCurrency(actualRot)} kr. Detta innebär att du endast
+              betalar {formatCurrency(discountedWorkCost)} kr i arbetskostnad.
+              Materialkostnad på {formatCurrency(materialCost)} kr tillkommer.
               <br />
               <br />
-              Totalt kommer du att betala{" "}
-              {totalCost.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} kr
-              för arbetskostnad och materialkostnad. Detta innebär att du sparar{" "}
-              {totalSavings.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} kr
-              i skattereduktion.
+              <strong>
+                Totalt kommer du att betala {formatCurrency(totalCost)} kr för
+                arbetskostnad och materialkostnad. Detta innebär att du sparar{" "}
+                {formatCurrency(totalSavings)} kr i skattereduktion.
+              </strong>
             </p>
             <Link
               href="offertforfragan"

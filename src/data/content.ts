@@ -101,4 +101,78 @@ export const content = {
       image: "/image006.webp",
     },
   ],
+  projects: [
+    {
+      id: "solceller-i-bollebygd",
+      title: "Solceller i Bollebygd",
+      subtitle:
+        "Vi installerade solceller på ett tak i Bollebygd för att ge kunden en hållbar och ekonomiskt fördelaktig energilösning. Med solceller kan kunden producera sin egen el och minska sin klimatpåverkan, samtidigt som hen sparar pengar på elräkningen. En smart investering för både plånboken och miljön!",
+      description: "",
+      image: "/projekt/project002.webp",
+    },
+    {
+      id: "plejd-i-duschrum",
+      title: "Plejd i duschrum",
+      subtitle:
+        "Vi installerade Plejd i ett duschrum för att skapa en smart och energieffektiv belysning. Med hjälp av Plejds trådlösa teknik kan kunden nu styra belysningen med sin smartphone, oavsett var hen befinner sig. Det ger en bekväm och energisnål lösning som passar perfekt i ett modernt hem.",
+      description: "",
+      image: "/projekt/project003.webp",
+    },
+    {
+      id: "elinstallation-koksrenovering",
+      title: "Elinstallation vid köksrenovering",
+      subtitle:
+        "Vi utförde en elinstallation i samband med en köksrenovering för att skapa en modern och funktionell köksmiljö. Med nya eluttag, belysning och vitvaror fick kunden en säker och effektiv elanläggning som passar perfekt i det nya köket. En smidig och trygg lösning för en bättre vardag!",
+      description: "",
+      image: "/projekt/project001.webp",
+    },
+    {
+      id: "solceller-i-bollebygd",
+      title: "Solceller i Bollebygd",
+      subtitle:
+        "Vi installerade solceller på ett tak i Bollebygd för att ge kunden en hållbar och ekonomiskt fördelaktig energilösning. Med solceller kan kunden producera sin egen el och minska sin klimatpåverkan, samtidigt som hen sparar pengar på elräkningen. En smart investering för både plånboken och miljön!",
+      description: "",
+      image: "/projekt/project002.webp",
+    },
+    {
+      id: "plejd-i-duschrum",
+      title: "Plejd i duschrum",
+      subtitle:
+        "Vi installerade Plejd i ett duschrum för att skapa en smart och energieffektiv belysning. Med hjälp av Plejds trådlösa teknik kan kunden nu styra belysningen med sin smartphone, oavsett var hen befinner sig. Det ger en bekväm och energisnål lösning som passar perfekt i ett modernt hem.",
+      description: "",
+      image: "/projekt/project003.webp",
+    },
+    {
+      id: "elinstallation-koksrenovering",
+      title: "Elinstallation vid köksrenovering",
+      subtitle:
+        "Vi utförde en elinstallation i samband med en köksrenovering för att skapa en modern och funktionell köksmiljö. Med nya eluttag, belysning och vitvaror fick kunden en säker och effektiv elanläggning som passar perfekt i det nya köket. En smidig och trygg lösning för en bättre vardag!",
+      description: "",
+      image: "/projekt/project001.webp",
+    },
+    {
+      id: "solceller-i-bollebygd",
+      title: "Solceller i Bollebygd",
+      subtitle:
+        "Vi installerade solceller på ett tak i Bollebygd för att ge kunden en hållbar och ekonomiskt fördelaktig energilösning. Med solceller kan kunden producera sin egen el och minska sin klimatpåverkan, samtidigt som hen sparar pengar på elräkningen. En smart investering för både plånboken och miljön!",
+      description: "",
+      image: "/projekt/project002.webp",
+    },
+    {
+      id: "plejd-i-duschrum",
+      title: "Plejd i duschrum",
+      subtitle:
+        "Vi installerade Plejd i ett duschrum för att skapa en smart och energieffektiv belysning. Med hjälp av Plejds trådlösa teknik kan kunden nu styra belysningen med sin smartphone, oavsett var hen befinner sig. Det ger en bekväm och energisnål lösning som passar perfekt i ett modernt hem.",
+      description: "",
+      image: "/projekt/project003.webp",
+    },
+    {
+      id: "elinstallation-koksrenovering",
+      title: "Elinstallation vid köksrenovering",
+      subtitle:
+        "Vi utförde en elinstallation i samband med en köksrenovering för att skapa en modern och funktionell köksmiljö. Med nya eluttag, belysning och vitvaror fick kunden en säker och effektiv elanläggning som passar perfekt i det nya köket. En smidig och trygg lösning för en bättre vardag!",
+      description: "",
+      image: "/projekt/project001.webp",
+    },
+  ],
 };

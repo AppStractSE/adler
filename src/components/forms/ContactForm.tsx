@@ -1,12 +1,12 @@
 "use client";
+import Spinner from "@/components/loaders/Spinner";
 import { IContactForm } from "@/types/IContactForm";
-import { useState } from "react";
+import { useRouter, useSearchParams } from "next/navigation"; // Import useSearchParams from next/navigation
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { twMerge } from "tailwind-merge";
-import Spinner from "../loaders/Spinner";
 
-import { content } from "@/data/content";
 import {
   Select,
   SelectContent,
@@ -15,10 +15,13 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "../ui/select";
+} from "@/components/ui/select";
+import { content } from "@/data/content";
 
 const ContactForm = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
+  const router = useRouter();
+  const searchParams = useSearchParams(); // Initialize useSearchParams
   const {
     register,
     handleSubmit,
@@ -36,6 +39,29 @@ const ContactForm = () => {
     },
     mode: "onTouched",
   });
+
+  useEffect(() => {
+    const query = searchParams.get("s");
+    if (query) {
+      const service = content.services.find((service) => service.id === query);
+      if (service) {
+        setValue("Service", service.title, { shouldValidate: true });
+        console.log(
+          "Set Service to:",
+          service.title,
+          "Current value:",
+          watch("Service"),
+        );
+      }
+    }
+  }, [searchParams, setValue, watch]);
+
+  const handleServiceChange = (value: string) => {
+    setValue("Service", value, { shouldValidate: true });
+    const newUrl = new URL(window.location.href);
+    newUrl.searchParams.delete("s");
+    router.replace(newUrl.pathname + newUrl.search, { scroll: false });
+  };
 
   function generateEmailHTML(data: IContactForm) {
     const formattedMessage = data.Message.replace(/\n/g, "<br>");
@@ -216,13 +242,9 @@ const ContactForm = () => {
             Tjänst
           </label>
           <Select
-            {...register("Service", {
-              required: "Välj en tjänst",
-            })}
-            onValueChange={(value) =>
-              setValue("Service", value, { shouldValidate: true })
-            }
-            value={watch("Service")}
+            key={watch("Service")}
+            onValueChange={handleServiceChange}
+            value={watch("Service") || ""}
           >
             <SelectTrigger
               className={twMerge(
@@ -325,7 +347,7 @@ const ContactForm = () => {
             formSubmitted ? "translate-y-0" : "translate-y-[125%]",
           )}
         >
-          <h6 className="text-2xl lg:text-center md:text-3xl">
+          <h6 className="text-2xl md:text-3xl lg:text-center">
             Meddelande skickat!
           </h6>
           <p className="whitespace-pre-line text-balance text-xl lg:text-center lg:text-xl">

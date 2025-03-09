@@ -1,11 +1,8 @@
-import { Smooch_Sans } from "next/font/google";
-// const garamond = localFont({
-//   src: "../../public/fonts/GaramondPremrPro.otf",
-// });
+import { DM_Sans } from "next/font/google";
 
-const smoochSans = Smooch_Sans({
-  variable: "--font-smooch-sans",
+const DMSans = DM_Sans({
+  variable: "--font-DM_Sans",
   subsets: ["latin"],
 });
 
-export { smoochSans };
+export { DMSans };

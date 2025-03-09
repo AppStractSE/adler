@@ -55,6 +55,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
   useEffect(() => {
     setMounted(true);
     scrollLock(isOpen);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   const handleToggle = () => {

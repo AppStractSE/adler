@@ -15,7 +15,7 @@ const CenterSection = ({ title, text, button, className }: Props) => {
     <section className={className}>
       <div
         className={twMerge(
-          "max-page-width flex flex-col items-center justify-center gap-8 px-4 py-12 md:gap-12 md:py-24 lg:max-w-screen-lg",
+          "max-page-width flex flex-col items-center justify-center gap-6 px-4 py-12 md:gap-8 md:py-24 lg:max-w-screen-lg",
         )}
       >
         <div className={twMerge("flex flex-col gap-6 md:gap-8")}>
