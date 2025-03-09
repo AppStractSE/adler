@@ -45,6 +45,7 @@ const TwoPaneSection = ({
         {image && (
           <div className={twMerge(rtl ? "lg:order-[-1]" : "")}>
             <Image
+              priority
               quality={100}
               src={image}
               alt=""

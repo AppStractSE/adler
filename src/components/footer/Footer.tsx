@@ -74,6 +74,7 @@ const Footer = () => {
         </div>
         <Link href="/" className="relative mt-12 block h-auto w-32 md:w-64">
           <Image
+            priority
             quality={100}
             className="!relative fill-white text-background"
             fill

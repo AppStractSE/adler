@@ -85,6 +85,7 @@ const SliderSection = ({ className }: Props) => {
                   >
                     <div className="relative aspect-[1.5/1] md:aspect-[1.25/1]">
                       <Image
+                        priority
                         quality={100}
                         fill
                         src={service.image}

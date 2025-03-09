@@ -55,7 +55,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
   useEffect(() => {
     setMounted(true);
     scrollLock(isOpen);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen]);
 
   const handleToggle = () => {
@@ -93,6 +93,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
         >
           <div className="flex items-center justify-between">
             <Image
+              priority
               quality={100}
               width={150}
               height={32}
@@ -122,9 +123,9 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
                 )}
               >
                 <Image
+                  priority
                   quality={100}
                   fill
-                  priority
                   src={serviceLink.image || "/placeholder.png"}
                   alt={serviceLink.label}
                   className="!relative aspect-square w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"

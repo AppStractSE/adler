@@ -27,6 +27,7 @@ const CardWithOverlay = ({
       )}
     >
       <Image
+        priority
         quality={100}
         width={1512}
         height={496}

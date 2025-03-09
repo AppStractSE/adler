@@ -69,6 +69,7 @@ const Header = () => {
               />
               <Link href="/" className="h-auto w-24 md:w-40">
                 <Image
+                  priority
                   quality={100}
                   fill
                   alt="Logo"

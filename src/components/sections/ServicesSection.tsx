@@ -34,6 +34,7 @@ const ServicesSection = ({ className }: Props) => {
             <div key={index} className="flex flex-col gap-6">
               <div className="relative aspect-[2/1] md:aspect-[1.75/1]">
                 <Image
+                  priority
                   quality={100}
                   fill
                   src={service.image}

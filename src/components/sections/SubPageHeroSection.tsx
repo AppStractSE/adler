@@ -21,6 +21,7 @@ const SubPageHeroSection = ({ title, text, className }: Props) => {
       )}
     >
       <Image
+        priority
         quality={100}
         fill
         alt={title}
