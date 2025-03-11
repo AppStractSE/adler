@@ -5,6 +5,7 @@ import { twMerge } from "tailwind-merge";
 
 interface Props {
   image?: string;
+  imageClasses?: string;
   title: string;
   text: string;
   rtl?: boolean;
@@ -20,6 +21,7 @@ const TwoPaneSection = ({
   text,
   rtl,
   button,
+  imageClasses = "aspect-[1.618/1] object-cover",
   className,
 }: Props) => {
   return (
@@ -52,7 +54,8 @@ const TwoPaneSection = ({
               height={1080}
               width={1920}
               className={twMerge(
-                "aspect-[1.618/1] h-auto w-full max-w-full rounded-xl object-cover object-center",
+                "h-auto w-full max-w-full rounded-xl object-center",
+                imageClasses,
               )}
             />
           </div>

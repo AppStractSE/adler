@@ -20,13 +20,13 @@ export default function Home() {
       <TwoPaneSection
         rtl
         button={{
-          href: "/vara-tjanster/belysning",
-          text: "Skaffa dig ett smart hem",
+          href: "/om-oss",
+          text: "Läs mer om oss",
         }}
         className="border-b"
-        image="/image001.webp"
-        title="Drömmer du om ett smart hem?"
-        text={`Vi installerar smarta el- och styrsystem som sparar tid, pengar och energi, oavsett projektets storlek. Med våra lösningar får du ökad säkerhet, lägre energikostnader och en vardag som blir både smartare och enklare.`}
+        image="/ton.png"
+        title="Varmt välkomna till TC Elservice!"
+        text={`Vi är ett litet företag med stora ambitioner, grundat 2024 av Kiattisak "Ton" Chokla – en auktoriserad elektriker med över 10 års erfarenhet. Från Lindesberg levererar vi smarta och säkra el- och automationslösningar för hem och företag. Service är vår styrka, men vi fixar allt från nybyggnation till ROT-projekt.`}
       />
       <CenteredSection className="border-b">
         <div className="flex flex-col gap-6 md:gap-8">
@@ -65,6 +65,17 @@ export default function Home() {
           </p>
         </Link>
       </CenteredSection>
+      <TwoPaneSection
+        rtl
+        button={{
+          href: "/vara-tjanster/belysning",
+          text: "Skaffa dig ett smart hem",
+        }}
+        className="border-b"
+        image="/image001.webp"
+        title="Drömmer du om ett smart hem?"
+        text={`Vi installerar smarta el- och styrsystem som sparar tid, pengar och energi, oavsett projektets storlek. Med våra lösningar får du ökad säkerhet, lägre energikostnader och en vardag som blir både smartare och enklare.`}
+      />
       <ServicesSection className="border-b" />
       <TwoPaneSection
         button={{

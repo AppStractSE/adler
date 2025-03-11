@@ -51,7 +51,7 @@ export default function Page() {
         <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
           Nyfiken på vad vi kan göra?
         </h2>
-        <p className="whitespace-pre-line text-balance text-center text-base md:text-lg">
+        <p className="max-w-screen-md whitespace-pre-line text-balance text-center text-base md:text-lg">
           Utforska våra tidigare projekt och tjänster för att få en bättre
           förståelse för hur vi kan hjälpa dig. Oavsett om det är en mindre
           installation eller ett större entreprenadprojekt, har vi lösningen för
