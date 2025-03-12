@@ -49,7 +49,11 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <SubPageHeroSection title="Om oss" text="Allt du förväntar dig" />
+      <SubPageHeroSection
+        title="Om oss"
+        text="Allt du förväntar dig"
+        image="/hero-image004.webp"
+      />
       <CenteredSection className="border-b">
         <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
           Din elpartner i Lindesberg
@@ -61,7 +65,7 @@ export default function Page() {
       <TwoPaneSection
         rtl
         className="border-b"
-        image="/ton.png"
+        image="/ton-elskap.png"
         title="Vår historia"
         text={`TC Elservice AB föddes ur en idé om att erbjuda pålitliga och kundanpassade elinstallationer. Ton, vår grundare, har varit i elbranschen sedan 2014 – och med hans energi har han byggt upp en stabil grund av kunskap.\n\nVi har som ambition i Lindesberg att växa och bli det självklara valet för el och automation i regionen.`}
       />

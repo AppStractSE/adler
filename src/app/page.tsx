@@ -24,7 +24,7 @@ export default function Home() {
           text: "Läs mer om oss",
         }}
         className="border-b"
-        image="/ton.png"
+        image="/ton-elskap.png"
         title="Varmt välkomna till TC Elservice!"
         text={`Vi är ett litet företag med stora ambitioner, grundat 2024 av Kiattisak "Ton" Chokla – en auktoriserad elektriker med över 10 års erfarenhet. Från Lindesberg levererar vi smarta och säkra el- och automationslösningar för hem och företag. Service är vår styrka, men vi fixar allt från nybyggnation till ROT-projekt.`}
       />
@@ -72,7 +72,7 @@ export default function Home() {
           text: "Skaffa dig ett smart hem",
         }}
         className="border-b"
-        image="/image001.webp"
+        image="/plejd-app.png"
         title="Drömmer du om ett smart hem?"
         text={`Vi installerar smarta el- och styrsystem som sparar tid, pengar och energi, oavsett projektets storlek. Med våra lösningar får du ökad säkerhet, lägre energikostnader och en vardag som blir både smartare och enklare.`}
       />

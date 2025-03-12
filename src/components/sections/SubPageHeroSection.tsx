@@ -11,13 +11,13 @@ interface Props {
   className?: string;
 }
 
-const SubPageHeroSection = ({ title, text, className }: Props) => {
+const SubPageHeroSection = ({ title, text, image, className }: Props) => {
   const isMounted = useMounted(250);
   return (
     <section
       className={twMerge(
         className,
-        "relative flex min-h-[70vh] items-end justify-start py-12 md:py-24",
+        "relative flex min-h-[50vh] items-end justify-start py-12 md:min-h-[75vh] md:py-24",
       )}
     >
       <Image
@@ -25,7 +25,7 @@ const SubPageHeroSection = ({ title, text, className }: Props) => {
         quality={100}
         fill
         alt={title}
-        src="/hero-image.webp"
+        src={image ?? "/hero-image.webp"}
         className="object-cover object-center"
       />
       <div className="absolute inset-0 bg-primary/50"></div>

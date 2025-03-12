@@ -21,7 +21,7 @@ const TwoPaneSection = ({
   text,
   rtl,
   button,
-  imageClasses = "aspect-[1.618/1] object-cover",
+  imageClasses = "aspect-[1.05/1] object-cover",
   className,
 }: Props) => {
   return (
@@ -51,10 +51,9 @@ const TwoPaneSection = ({
               quality={100}
               src={image}
               alt=""
-              height={1080}
-              width={1920}
+              fill
               className={twMerge(
-                "h-auto w-full max-w-full rounded-xl object-center",
+                "!relative h-auto w-full max-w-full rounded-xl object-center",
                 imageClasses,
               )}
             />

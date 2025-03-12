@@ -46,6 +46,7 @@ export default function Page() {
       <SubPageHeroSection
         title="Projekt"
         text="Titta närmare på några av våra tidigare projekt"
+        image="/hero-image001.webp"
       />
       <CenteredSection className="overflow-hidden border-b">
         <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">

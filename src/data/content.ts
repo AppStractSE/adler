@@ -58,7 +58,7 @@ export const content = {
         "Varje hem och företag är unikt – och det är våra installationer också. Oavsett om det är ett litet servicejobb eller ett stort entreprenadprojekt, anpassar vi våra el- och styrinstallationer efter dina specifika önskemål. Med fokus på säkerhet och precision ser vi till att din elanläggning är både trygg och effektiv.",
       description:
         "Vi utför alla typer av elinstallationer, från mindre servicejobb till större entreprenader.",
-      image: "/image003.webp",
+      image: "/elskap.png",
     },
     {
       id: "laddbox",
@@ -88,7 +88,7 @@ export const content = {
         "Belysning är mer än bara ljus – det är känslan i ett rum. Oavsett om det är för hemmet eller arbetsplatsen, hjälper vi dig att skapa en trivsam och energieffektiv miljö. Från installation till reparation ser vi till att din belysning är precis som du vill ha den, så att du kan njuta av en ljusare och mer inspirerande vardag.",
       description:
         "Vi hjälper dig med allt inom belysning, från installation till reparation.",
-      image: "/image007.webp",
+      image: "/utomhusbelysning-altan.png",
     },
     {
       id: "natverksinstallation",
