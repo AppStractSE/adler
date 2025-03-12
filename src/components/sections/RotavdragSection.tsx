@@ -31,17 +31,7 @@ const RotavdragSection = () => {
               Vad innebär ROT-avdraget?
             </h3>
             <p className="whitespace-pre-line text-base md:text-lg">
-              Med ROT-avdraget kan du få upp till 50 000 kronor i
-              skattereduktion per person och år. Det betyder att du endast
-              behöver stå för 70% av arbetskostnaden när du anlitar oss för
-              renoverings- och hantverkstjänster i ditt hem eller fritidshus.
-              {"\n\n"}Tänk dig att du har en arbetskostnad på 100 000 kronor –
-              då kan du sänka din skatt med hela 30 000 kronor per person och
-              år. Hantverkstjänster är perfekta för ROT-avdraget, eftersom
-              arbetskostnaderna ofta står för merparten av det totala priset,
-              vilket gör att du kan utnyttja avdraget nästintill maximalt. Vill
-              du veta exakt hur mycket du kan spara? Testa vår kalkylator här
-              nedanför och få svaret direkt!
+              {`Med ROT-avdraget kan du få upp till 50 000 kronor i skattereduktion per person och år. Det innebär att du endast behöver betala 70% av arbetskostnaden när du anlitar någon för renoverings- och hantverkstjänster i ditt hem eller fritidshus. \n\nOm du exempelvis har en arbetskostnad på 100 000 kronor kan du få en skattereduktion på 30 000 kronor, vilket sänker din faktiska kostnad till 70 000 kronor. Är ni flera personer i hushållet kan ni tillsammans utnyttja era individuella ROT-avdrag, men den totala skattereduktionen kan aldrig överstiga 30% av arbetskostnaden.\n\nVill du veta exakt hur mycket du kan spara? Testa vår ROT-kalkylator här nedanför och få svaret direkt!`}
             </p>
           </div>
           <div className="flex flex-col gap-12 md:gap-16">
