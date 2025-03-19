@@ -25,8 +25,8 @@ export default function Home() {
         }}
         className="border-b border-gray-300"
         image="/ton-elskap.png"
-        title="Varmt välkomna till TC Elservice!"
-        text={`Vi är ett litet företag med stora ambitioner, grundat 2024 av Kiattisak "Ton" Chokla – en auktoriserad elektriker med över 10 års erfarenhet. Från Lindesberg levererar vi smarta och säkra el- och automationslösningar för hem och företag. Service är vår styrka, men vi fixar allt från nybyggnation till ROT-projekt.`}
+        title="Vilka är vi?"
+        text={`Vi är ett litet företag med stora ambitioner, grundat 2024 av Kiattisak "Ton" Chokla – en auktoriserad elektriker med över 10 års erfarenhet. Från Lindesberg levererar vi smarta och säkra el- och automationslösningar för hem och företag. Service är vår styrka, men vi fixar allt från nybyggnation till ROT-projekt.\n\nVarmt välkomna till TC Elservice!`}
       />
       <CenteredSection className="border-b border-gray-300">
         <div className="flex flex-col gap-6 md:gap-8">
