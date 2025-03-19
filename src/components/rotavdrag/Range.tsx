@@ -37,7 +37,7 @@ const Range = ({
         max={max}
         step={step}
         onChange={(e) => setValue(parseInt(e.target.value))}
-        className="range-lg h-4 w-full cursor-pointer appearance-none rounded-full thumb-slider"
+        className="range-lg h-4 w-full cursor-pointer appearance-none border border-gray-400 rounded-full thumb-slider"
         style={{
           background: `linear-gradient(to right, #1e6c89 0%, #4bbecf ${
             (value / max) * 97.5

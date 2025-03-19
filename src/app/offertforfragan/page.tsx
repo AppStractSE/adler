@@ -1,7 +1,6 @@
 import ContactSection from "@/components/sections/ContactSection";
 import SubPageHeroSection from "@/components/sections/SubPageHeroSection";
 import { Metadata } from "next";
-import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "Offertförfrågan",
@@ -40,14 +39,12 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <Suspense fallback={null}>
-        <SubPageHeroSection
-          title="Offertförfrågan"
-          text="Få en offert redan idag"
-          image="/hero-image003.webp"
-        />
-        <ContactSection />
-      </Suspense>
+      <SubPageHeroSection
+        title="Offertförfrågan"
+        text="Få en offert redan idag"
+        image="/hero-image003.webp"
+      />
+      <ContactSection />
     </>
   );
 }

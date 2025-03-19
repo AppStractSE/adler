@@ -53,7 +53,7 @@ const TwoPaneSection = ({
               alt=""
               fill
               className={twMerge(
-                "!relative h-auto w-full max-w-full rounded-xl object-center",
+                "!relative h-auto w-full max-w-full rounded-xl object-center outline outline-1 outline-gray-300",
                 imageClasses,
               )}
             />

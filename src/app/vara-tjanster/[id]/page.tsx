@@ -65,7 +65,7 @@ export default async function Page({
     <>
       <SubPageHeroSection title={service.description} text={service.title} />
       <TwoPaneSection
-        className="border-b"
+        className="border-b border-gray-300"
         title={service.sellingPointTitle}
         text={service.sellingPointDesc}
         image={service.image}
@@ -79,13 +79,13 @@ export default async function Page({
           text: "Jag vill ha en offert",
         }}
       />
-      <ServicesSection className="border-b" />
+      <ServicesSection className="border-b border-gray-300" />
       <CenterSection
         button={{
           href: "/rotavdrag",
           text: "Räkna ut ROT-avdrag",
         }}
-        className="border-b"
+        className="border-b border-gray-300"
         title="Du vet väl om att du kan nyttja ROT-avdrag hos oss?"
         text={`Planera och utnyttja rotavdraget för att minska kostnaderna för dina elinstallationer vid renovering eller nybyggnation. Våra lösningar säkerställer ett effektivt utförande, där du enkelt kan dra nytta av skatteavdraget för ett ekonomiskt resultat.`}
       />

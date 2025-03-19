@@ -95,7 +95,7 @@ const ServicePopupSection = ({ className }: Props) => {
                 <SplideSlide key={index}>
                   <Link
                     href={`/vara-tjanster/${service.href}`}
-                    className="group flex min-h-[300px] flex-col gap-4 rounded-lg bg-white px-6 py-8 text-black shadow transition-all duration-200 ease-in-out hover:-translate-y-1 hover:outline hover:outline-1 hover:outline-cyan-500"
+                    className="group flex min-h-[300px] flex-col gap-4 rounded-lg bg-white px-6 py-8 text-black shadow transition-all duration-200 ease-in-out hover:-translate-y-1 outline outline-1 outline-gray-300 hover:outline-cyan-500"
                   >
                     <h3 className="text-xl">{service.title}</h3>
                     <p className="text-base font-medium">{service.text}</p>

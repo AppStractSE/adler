@@ -16,19 +16,19 @@ export default function Home() {
       <HeroSection
         className={`bg-[url('/hero-image.webp')] bg-cover bg-center bg-no-repeat`}
       />
-      <ServicePopupSection className="-mt-12 overflow-hidden border-b md:-mt-20" />
+      <ServicePopupSection className="-mt-12 overflow-hidden border-b border-gray-300 md:-mt-20" />
       <TwoPaneSection
         rtl
         button={{
           href: "/om-oss",
           text: "Läs mer om oss",
         }}
-        className="border-b"
+        className="border-b border-gray-300"
         image="/ton-elskap.png"
         title="Varmt välkomna till TC Elservice!"
         text={`Vi är ett litet företag med stora ambitioner, grundat 2024 av Kiattisak "Ton" Chokla – en auktoriserad elektriker med över 10 års erfarenhet. Från Lindesberg levererar vi smarta och säkra el- och automationslösningar för hem och företag. Service är vår styrka, men vi fixar allt från nybyggnation till ROT-projekt.`}
       />
-      <CenteredSection className="border-b">
+      <CenteredSection className="border-b border-gray-300">
         <div className="flex flex-col gap-6 md:gap-8">
           <h2 className="w-full text-balance text-3xl font-medium tracking-wide sm:text-4xl md:text-5xl">
             Några av våra tidigare projekt
@@ -71,18 +71,18 @@ export default function Home() {
           href: "/vara-tjanster/belysning",
           text: "Skaffa dig ett smart hem",
         }}
-        className="border-b"
+        className="border-b border-gray-300"
         image="/plejd-app.png"
         title="Drömmer du om ett smart hem?"
         text={`Vi installerar smarta el- och styrsystem som sparar tid, pengar och energi, oavsett projektets storlek. Med våra lösningar får du ökad säkerhet, lägre energikostnader och en vardag som blir både smartare och enklare.`}
       />
-      <ServicesSection className="border-b" />
+      <ServicesSection className="border-b border-gray-300" />
       <TwoPaneSection
         button={{
           href: "/vara-tjanster/laddbox",
           text: "Läs mer om laddbox",
         }}
-        className="border-b"
+        className="border-b border-gray-300"
         image="/image002.webp"
         title="Nyfiken på laddbox?"
         text={`Planera och övervaka din laddning för att alltid ha tillräckligt med ström när du behöver det. Den hjälper också till att minimera din elräkning genom att ladda när elpriset är lägst.\n\nEn installation av en elbilsladdare är enkel och snabb. Du kan ansluta laddboxen till din elmätare och ställa in ditt laddningsschema med hjälp av den intuitiva appen.`}
@@ -92,7 +92,7 @@ export default function Home() {
           href: "/rotavdrag",
           text: "Räkna ut ROT-avdrag",
         }}
-        className="border-b"
+        className="border-b border-gray-300"
         title="Hur räknar jag ut ROT-avdrag?"
         text={`Planera och utnyttja rotavdraget för att minska kostnaderna för dina elinstallationer vid renovering eller nybyggnation. Våra lösningar säkerställer ett effektivt utförande, där du enkelt kan dra nytta av skatteavdraget för ett ekonomiskt resultat.`}
       />

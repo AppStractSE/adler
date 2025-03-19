@@ -102,14 +102,14 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
             />
             <button
               onClick={handleToggle}
-              className="rounded-full border border-primary p-1"
+              className="rounded-full border border-primary/75 p-1"
             >
-              <X size={28} />
+              <X size={28} className="text-primary/75" />
             </button>
           </div>
-          <hr className="border-primary" />
+          <hr className="border-gray-300" />
           <MainLinks currentPath={pathname} />
-          <hr className="border-primary" />
+          <hr className="border-gray-300" />
           <h6 className="text-base tracking-wide text-black">
             Upptäck våra tjänster
           </h6>
@@ -140,7 +140,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
               </Link>
             ))}
           </div>
-          <hr className="border-primary" />
+          <hr className="border-gray-300" />
           <div className="flex flex-col gap-4">
             <h6 className="text-base tracking-wide text-black">
               {content.followUs}
