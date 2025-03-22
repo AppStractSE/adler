@@ -15,7 +15,6 @@ export const content = {
 
     Object.entries(theme).forEach(([key, value]) => {
       const cssVar = `--${key.replace(/[A-Z]/g, (match) => `-${match.toLowerCase()}`)}`;
-      console.log("asd", cssVar);
       if (value.startsWith("#")) value = hexToRgb(value);
       root.style.setProperty(cssVar, value);
     });
