@@ -69,15 +69,15 @@ export default function Page() {
         title="Vår historia"
         text={`TC Elservice AB föddes ur en idé om att erbjuda pålitliga och kundanpassade elinstallationer. Ton, vår grundare, har varit i elbranschen sedan 2014 – och med hans energi har han byggt upp en stabil grund av kunskap.\n\nVi har som ambition i Lindesberg att växa och bli det självklara valet för el och automation i regionen.`}
       />
-      <TwoPaneSection
+      {/* <TwoPaneSection
         imageClasses="aspect-auto object-cover"
         className="border-b border-gray-300"
         image="/cert.jpg"
         title="Kvalitet i varje steg"
         text={`Vi tar oss an samma uppdrag som andra elfirmor, men med extra omsorg. Vi håller vad vi lovar när det gäller tid och håller dig uppdaterad om något ändras. Tillsammans planerar vi ditt projekt, genomför det med precision och lämnar det i toppskick – både praktiskt och estetiskt. Du slipper oroa dig för stök eller halvdana resultat, för vi gör det ordentligt från start till slut.`}
-      />
+      /> */}
       <TwoPaneSection
-        rtl
+        // rtl
         className="border-b border-gray-300"
         image="/image006.webp"
         title="Våra värderingar"
