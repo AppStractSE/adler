@@ -1,14 +1,8 @@
-import CardWithOverlay from "@/components/cards/CardWithOverlay";
-import CenteredSection from "@/components/sections/CenteredSection";
 import CenterSection from "@/components/sections/CenterSection";
 import HeroSection from "@/components/sections/HeroSection";
 import ServicePopupSection from "@/components/sections/ServicePopupSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TwoPaneSection from "@/components/sections/TwoPaneSection";
-import { content } from "@/data/content";
-import { ArrowRight } from "lucide-react";
-import Link from "next/link";
-import { twMerge } from "tailwind-merge";
 
 export default function Home() {
   return (

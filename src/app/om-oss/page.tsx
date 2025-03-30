@@ -1,14 +1,8 @@
-import CardWithOverlay from "@/components/cards/CardWithOverlay";
 import CenteredSection from "@/components/sections/CenteredSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import SubPageHeroSection from "@/components/sections/SubPageHeroSection";
 import TwoPaneSection from "@/components/sections/TwoPaneSection";
-import SplideWithArrows from "@/components/splide/SplideWithArrows";
-import { content } from "@/data/content";
-import { ArrowRight } from "lucide-react";
 import { Metadata } from "next";
-import Link from "next/link";
-import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
   title: "Om oss",
