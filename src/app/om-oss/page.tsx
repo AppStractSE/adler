@@ -81,7 +81,7 @@ export default function Page() {
         className="border-b border-gray-300"
         image="/image006.webp"
         title="Våra värderingar"
-        text={`Kunden är alltid vår prioritet. Med Tons Auktorisation A från Elsäkerhetsverket garanterar vi installationer som är både säkra och enligt reglerna. Vi satsar på raka besked, miljövänliga lösningar och resultat du kan lita på. Från Lindesberg når vi ut till närområdet, redo för både små fixar och större utmaningar.`}
+        text={`Kunden är alltid vår prioritet. Med auktorisation från Elsäkerhetsverket garanterar vi installationer som är både säkra och enligt reglerna. Vi satsar på raka besked, miljövänliga lösningar och resultat du kan lita på. Från Lindesberg når vi ut till närområdet, redo för både små fixar och större utmaningar.`}
       />
       {/* <CenteredSection className="overflow-hidden border-b">
         <div className="flex flex-col gap-6 md:gap-8">
