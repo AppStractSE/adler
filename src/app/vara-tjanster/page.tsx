@@ -151,7 +151,7 @@ export default function Page() {
           text={service.description}
         />
       ))}
-      <CenteredSection className="overflow-hidden border-b">
+      {/* <CenteredSection className="overflow-hidden border-b">
         <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
           Nyfiken på vad vi kan göra?
         </h2>
@@ -232,7 +232,7 @@ export default function Page() {
             />
           ))}
         </SplideWithArrows>
-      </CenteredSection>
+      </CenteredSection> */}
       <CenterSection
         button={{
           href: "/rotavdrag",

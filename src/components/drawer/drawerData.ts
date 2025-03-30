@@ -10,7 +10,7 @@ export interface DrawerLink {
 
 const mainLinks: DrawerLink[] = [
   { href: "/", label: "Hem" },
-  { href: "/projekt", label: "Projekt" },
+  // { href: "/projekt", label: "Projekt" },
   { href: "/om-oss", label: "Om oss" },
   {
     href: "/vara-tjanster",

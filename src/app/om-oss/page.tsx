@@ -83,7 +83,7 @@ export default function Page() {
         title="Våra värderingar"
         text={`Kunden är alltid vår prioritet. Med Tons Auktorisation A från Elsäkerhetsverket garanterar vi installationer som är både säkra och enligt reglerna. Vi satsar på raka besked, miljövänliga lösningar och resultat du kan lita på. Från Lindesberg når vi ut till närområdet, redo för både små fixar och större utmaningar.`}
       />
-      <CenteredSection className="overflow-hidden border-b">
+      {/* <CenteredSection className="overflow-hidden border-b">
         <div className="flex flex-col gap-6 md:gap-8">
           <h2 className="w-full text-balance text-3xl font-medium tracking-wide sm:text-4xl md:text-5xl">
             Några av våra tidigare projekt
@@ -174,7 +174,7 @@ export default function Page() {
             Gå till projekt
           </p>
         </Link>
-      </CenteredSection>
+      </CenteredSection> */}
       <ServicesSection />
     </>
   );

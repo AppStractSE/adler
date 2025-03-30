@@ -28,7 +28,7 @@ export default function Home() {
         title="Vilka är vi?"
         text={`Vi är ett litet företag med stora ambitioner, grundat 2024 av Kiattisak "Ton" Chokla – en auktoriserad elektriker med över 10 års erfarenhet. Från Lindesberg levererar vi smarta och säkra el- och automationslösningar för hem och företag. Service är vår styrka, men vi fixar allt från nybyggnation till ROT-projekt.\n\nVarmt välkomna till TC Elservice!`}
       />
-      <CenteredSection className="border-b border-gray-300">
+      {/* <CenteredSection className="border-b border-gray-300">
         <div className="flex flex-col gap-6 md:gap-8">
           <h2 className="w-full text-balance text-3xl font-medium tracking-wide sm:text-4xl md:text-5xl">
             Några av våra tidigare projekt
@@ -64,7 +64,7 @@ export default function Home() {
             Gå till projekt
           </p>
         </Link>
-      </CenteredSection>
+      </CenteredSection> */}
       <TwoPaneSection
         rtl
         button={{

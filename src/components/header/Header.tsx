@@ -79,12 +79,12 @@ const Header = () => {
               </Link>
             </div>
             <div className="flex items-center gap-2 lg:gap-4">
-              <Link
+              {/* <Link
                 href="/projekt"
                 className={twMerge(buttonBaseClasses, "hidden sm:block")}
               >
                 Projekt
-              </Link>
+              </Link> */}
               <Link
                 href="/vara-tjanster"
                 className={twMerge(buttonBaseClasses, "hidden sm:block")}
