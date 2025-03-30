@@ -1,4 +1,3 @@
-import CardWithOverlay from "@/components/cards/CardWithOverlay";
 import CenteredSection from "@/components/sections/CenteredSection";
 import CenterSection from "@/components/sections/CenterSection";
 import SubPageHeroSection from "@/components/sections/SubPageHeroSection";
@@ -8,7 +7,6 @@ import { content } from "@/data/content";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
   title: "Våra tjänster",
