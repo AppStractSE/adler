@@ -21,7 +21,7 @@ const ContactSection = () => {
             height={1080}
             width={1920}
             className={twMerge(
-              "mt-4 aspect-[1.618/1] h-auto w-full max-w-full rounded-xl object-cover object-center",
+              "mt-4 aspect-[1.618/1] h-auto w-full max-w-full rounded-sm object-cover object-center",
             )}
           />
         </div>

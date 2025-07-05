@@ -26,16 +26,16 @@ const TwoPaneSection = ({
 }: Props) => {
   return (
     <section className={className}>
-      <div className="max-page-width grid grid-cols-1 items-center justify-between gap-6 px-4 py-12 md:gap-8 md:py-24 lg:grid-cols-2 lg:gap-32">
-        <div className={twMerge("flex flex-col gap-6 md:gap-8")}>
-          <h3 className="text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
+      <div className="max-page-width grid grid-cols-1 items-center justify-between gap-6 px-4 py-12 md:gap-8 md:py-24 lg:grid-cols-2 lg:gap-24">
+        <div className={twMerge("flex flex-col gap-4 md:gap-6 lg:gap-8")}>
+          <h3 className="text-2xl font-medium tracking-wide lg:text-3xl">
             {title}
           </h3>
           <p className="whitespace-pre-line text-base md:text-lg">{text}</p>
           {button && (
             <Link
               href={button.href}
-              className="flex w-fit items-center gap-2 transition-all duration-200 ease-in-out hover:gap-3 hover:text-cyan-500"
+              className="flex w-fit items-center gap-2 transition-all duration-200 ease-in-out hover:gap-3 hover:text-orange-500"
             >
               <ArrowRight size={18} />
               <p className="text-base font-medium underline underline-offset-4">
@@ -53,7 +53,7 @@ const TwoPaneSection = ({
               alt=""
               fill
               className={twMerge(
-                "!relative h-auto w-full max-w-full rounded-xl object-center outline outline-1 outline-gray-300",
+                "!relative h-auto w-full max-w-full rounded-sm object-center",
                 imageClasses,
               )}
             />

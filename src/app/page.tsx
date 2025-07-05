@@ -1,16 +1,13 @@
 import CenterSection from "@/components/sections/CenterSection";
+import ContactSection from "@/components/sections/ContactSection";
 import HeroSection from "@/components/sections/HeroSection";
-import ServicePopupSection from "@/components/sections/ServicePopupSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import TwoPaneSection from "@/components/sections/TwoPaneSection";
 
 export default function Home() {
   return (
     <>
-      <HeroSection
-        className={`bg-[url('/hero-image.webp')] bg-cover bg-center bg-no-repeat`}
-      />
-      <ServicePopupSection className="-mt-12 overflow-hidden border-b border-gray-300 md:-mt-20" />
+      <HeroSection />
       <TwoPaneSection
         rtl
         button={{
@@ -18,78 +15,31 @@ export default function Home() {
           text: "Läs mer om oss",
         }}
         className="border-b border-gray-300"
-        image="/ton-elskap.png"
-        title="Vilka är vi?"
-        text={`Vi är ett litet företag med stora ambitioner, grundat 2024 av Kiattisak "Ton" Chokla – en auktoriserad elektriker med över 10 års erfarenhet. Från Lindesberg levererar vi smarta och säkra el- och automationslösningar för hem och företag. Service är vår styrka, men vi fixar allt från nybyggnation till ROT-projekt.\n\nVarmt välkomna till TC Elservice!`}
-      />
-      {/* <CenteredSection className="border-b border-gray-300">
-        <div className="flex flex-col gap-6 md:gap-8">
-          <h2 className="w-full text-balance text-3xl font-medium tracking-wide sm:text-4xl md:text-5xl">
-            Några av våra tidigare projekt
-          </h2>
-          <p className="whitespace-pre-line text-balance text-base md:text-lg">
-            Nyfiken på vad vi har gjort tidigare? Här kan du se några av våra
-            tidigare projekt, där vi har hjälpt kunder med allt från solceller
-            och belysning till elinstallationer och nätverksinstallationer.
-          </p>
-        </div>
-        <div className="grid w-full grid-cols-1 grid-rows-1 items-start gap-4 md:grid-cols-2 md:gap-6 lg:gap-8">
-          {content.projects.slice(0, 3).map((project, index) => (
-            <CardWithOverlay
-              key={index}
-              href={"/projekt/"}
-              title={project.title}
-              subtitle="Projekt"
-              description={project.description}
-              image={project.image}
-              className={twMerge(
-                index == 2 ? "md:col-span-2" : "",
-                "max-h-[450px]",
-              )}
-            />
-          ))}
-        </div>
-        <Link
-          href="/projekt"
-          className="flex w-fit items-center gap-2 transition-all duration-200 ease-in-out hover:gap-3 hover:text-cyan-500"
-        >
-          <ArrowRight size={18} />
-          <p className="text-base font-medium underline underline-offset-4 md:text-lg">
-            Gå till projekt
-          </p>
-        </Link>
-      </CenteredSection> */}
-      <TwoPaneSection
-        rtl
-        button={{
-          href: "/vara-tjanster/belysning",
-          text: "Skaffa dig ett smart hem",
-        }}
-        className="border-b border-gray-300"
-        image="/plejd-app.png"
-        title="Drömmer du om ett smart hem?"
-        text={`Vi installerar smarta el- och styrsystem som sparar tid, pengar och energi, oavsett projektets storlek. Med våra lösningar får du ökad säkerhet, lägre energikostnader och en vardag som blir både smartare och enklare.`}
+        image="/adler-byggservice.png"
+        title="Snickare i Skara"
+        text={`Vi erbjuder ett mångsidigt utbud av tjänster för allt från småfix till stora projekt. Med vår långa erfarenhet och passion för hantverk levererar vi skräddarsydda lösningar som inte bara möter, utan överträffar dina förväntningar.\n\nOavsett om det är en snabb reparation eller en omfattande renovering, sätter vi en ära i att få varje detalj att glänsa.`}
       />
       <ServicesSection className="border-b border-gray-300" />
       <TwoPaneSection
         button={{
-          href: "/vara-tjanster/laddbox",
-          text: "Läs mer om laddbox",
+          href: "/vara-tjanster/kok",
+          text: "Läs mer om kök",
         }}
         className="border-b border-gray-300"
         image="/image002.webp"
-        title="Nyfiken på laddbox?"
-        text={`Planera och övervaka din laddning för att alltid ha tillräckligt med ström när du behöver det. Den hjälper också till att minimera din elräkning genom att ladda när elpriset är lägst.\n\nEn installation av en elbilsladdare är enkel och snabb. Du kan ansluta laddboxen till din elmätare och ställa in ditt laddningsschema med hjälp av den intuitiva appen.`}
+        title="Köksplaner? Vi hjälper dig!"
+        text={`Vi erbjuder professionell köksplanering och installation för att skapa ditt drömkök. Vårt team av erfarna hantverkare hjälper dig genom hela processen, från design till färdigställande.\n\nOavsett om du vill ha en modern, klassisk eller skräddarsydd lösning, så har vi expertisen och engagemanget för att göra ditt kök både funktionellt och stilrent.`}
       />
       <CenterSection
         button={{
           href: "/rotavdrag",
-          text: "Räkna ut ROT-avdrag",
+          text: "Till kalkylatorn",
         }}
         className="border-b border-gray-300"
         title="Hur räknar jag ut ROT-avdrag?"
-        text={`Planera och utnyttja rotavdraget för att minska kostnaderna för dina elinstallationer vid renovering eller nybyggnation. Våra lösningar säkerställer ett effektivt utförande, där du enkelt kan dra nytta av skatteavdraget för ett ekonomiskt resultat.`}
+        text={`ROT-avdraget är en skattereduktion som gör det billigare att renovera, bygga om eller bygga till i ditt hem. Det gäller för arbetskostnaden och kan ge dig upp till 30% rabatt på arbetskostnaden för godkända arbeten.\n\nVi har skapat en enkel kalkylator som hjälper dig att räkna ut hur mycket du kan spara med ROT-avdraget. Ange bara kostnaden för arbetet och se hur mycket du kan dra av på din skatt.`}
       />
+      <ContactSection />
     </>
   );
 }

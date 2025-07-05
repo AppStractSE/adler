@@ -11,16 +11,16 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Våra tjänster",
   openGraph: {
-    title: "TC Elservice | Våra tjänster",
+    title: "Adler Byggservice | Våra tjänster",
     description: "Våra tjänster",
     url: "/vara-tjanster",
-    siteName: "TC Elservice",
+    siteName: "Adler Byggservice",
     images: [
       {
         url: "/hero-image.webp",
         width: 1200,
         height: 630,
-        alt: "TC Elservice | Våra tjänster",
+        alt: "Adler Byggservice | Våra tjänster",
       },
     ],
     locale: "sv_SE",
@@ -29,13 +29,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@",
-    title: "TC Elservice",
+    title: "Adler Byggservice",
     images: [
       {
         url: "/hero-image.webp",
         width: 1200,
         height: 630,
-        alt: "TC Elservice - Våra tjänster",
+        alt: "Adler Byggservice - Våra tjänster",
       },
     ],
     description: "Våra tjänster",

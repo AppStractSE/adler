@@ -37,18 +37,18 @@ const Header = () => {
   }, [pathname]);
 
   const buttonBaseClasses = twMerge(
-    "px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm tracking-wide font-medium hover:rounded-full transition-all duration-100 ease-in-out",
-    isScrolled ? "hover:text-cyan-500" : "hover:text-cyan-400",
+    "px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm tracking-wide font-medium hover:rounded-sm transition-all duration-100 ease-in-out",
+    isScrolled ? "hover:text-orange-500" : "hover:text-orange-400",
   );
 
   return (
     <>
       <header
         className={twMerge(
-          "fixed top-0 z-50 w-full transition-all duration-500 ease-in-out",
+          "fixed top-0 z-50 w-full text-white transition-all duration-500 ease-in-out",
           isScrolled
-            ? "bg-white/90 shadow-md backdrop-blur-md"
-            : "bg-transparent py-4 text-white",
+            ? "bg-primary/80 shadow-md backdrop-blur-md"
+            : "bg-transparent py-4",
           isMounted ? "translate-y-0 opacity-100" : "-translate-y-24 opacity-0",
         )}
       >
@@ -63,28 +63,21 @@ const Header = () => {
               </button>
               <div
                 className={twMerge(
-                  "h-6 min-w-[1.5px] transition-all duration-100 ease-in-out",
-                  isScrolled ? "bg-primary" : "bg-white",
+                  "h-6 min-w-[1.5px] bg-white transition-all duration-100 ease-in-out",
                 )}
               />
-              <Link href="/" className="h-auto w-24 md:w-40">
+              <Link href="/" className="h-auto w-52">
                 <Image
                   priority
                   quality={100}
                   fill
                   alt="Logo"
-                  src={isScrolled ? "/logo.png" : "/logo_white.png"}
-                  className="!relative transition-all duration-100 ease-in-out"
+                  src="/logo.png"
+                  className="!relative transition-none duration-0 ease-in-out"
                 />
               </Link>
             </div>
             <div className="flex items-center gap-2 lg:gap-4">
-              {/* <Link
-                href="/projekt"
-                className={twMerge(buttonBaseClasses, "hidden sm:block")}
-              >
-                Projekt
-              </Link> */}
               <Link
                 href="/vara-tjanster"
                 className={twMerge(buttonBaseClasses, "hidden sm:block")}
@@ -104,10 +97,7 @@ const Header = () => {
                 href="/offertforfragan"
                 className={twMerge(
                   buttonBaseClasses,
-                  "min-w-fit rounded-full bg-cyan-500 hover:bg-cyan-400",
-                  isScrolled
-                    ? "hover:text-initial text-white"
-                    : "hover:text-initial text-primary",
+                  "min-w-fit rounded-sm bg-orange-400 text-primary hover:bg-orange-500 hover:text-primary",
                 )}
               >
                 Offertförfrågan

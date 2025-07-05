@@ -89,7 +89,7 @@ const RotavdragSection = () => {
             </p>
             <Link
               href="offertforfragan"
-              className="mt-4 flex items-center justify-center rounded-full bg-cyan-900 px-6 py-2.5 text-base text-background transition-all duration-300 ease-in-out hover:bg-cyan-800"
+              className="mt-4 flex items-center justify-center rounded-sm bg-orange-900 px-6 py-2.5 text-base text-background transition-all duration-300 ease-in-out hover:bg-orange-800"
             >
               Begär offert
             </Link>

@@ -6,16 +6,16 @@ import { Suspense } from "react";
 export const metadata: Metadata = {
   title: "Offertförfrågan",
   openGraph: {
-    title: "TC Elservice | Offertförfrågan",
-    description: "Få en offert redan idag hos TC Elservice",
+    title: "Adler Byggservice | Offertförfrågan",
+    description: "Få en offert redan idag hos Adler Byggservice",
     url: "/offertforfragan",
-    siteName: "TC Elservice",
+    siteName: "Adler Byggservice",
     images: [
       {
         url: "/hero-image.webp",
         width: 1200,
         height: 630,
-        alt: "TC Elservice | Offertförfrågan",
+        alt: "Adler Byggservice | Offertförfrågan",
       },
     ],
     locale: "sv_SE",
@@ -24,16 +24,16 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@",
-    title: "TC Elservice",
+    title: "Adler Byggservice",
     images: [
       {
         url: "/hero-image.webp",
         width: 1200,
         height: 630,
-        alt: "TC Elservice - Offertförfrågan",
+        alt: "Adler Byggservice - Offertförfrågan",
       },
     ],
-    description: "Få en offert redan idag hos TC Elservice",
+    description: "Få en offert redan idag hos Adler Byggservice",
   },
 };
 

@@ -7,7 +7,7 @@ import Link from "next/link";
 const Footer = () => {
   const footerlinks = [
     // { name: "Tidigare projekt", href: "/projekt" },
-    { name: "Om TC Elservice", href: "/om-oss" },
+    { name: "Om Adler Byggservice", href: "/om-oss" },
     { name: "Våra tjänster", href: "/vara-tjanster" },
     { name: "Räkna ut rotavdrag", href: "/rotavdrag" },
     { name: "Offertförfrågan", href: "/offertforfragan" },
@@ -24,7 +24,7 @@ const Footer = () => {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="flex w-fit items-center gap-2 text-lg font-light hover:text-cyan-500 md:text-3xl"
+                  className="flex w-fit items-center gap-2 text-lg font-light hover:text-orange-500 md:text-3xl"
                 >
                   {link.name}
                 </Link>
@@ -35,20 +35,20 @@ const Footer = () => {
             <h5 className="text-base">Kontakt</h5>
             <div className="flex flex-col gap-2">
               <Link
-                className="whitespace-pre-line text-lg font-light hover:text-cyan-500 md:text-lg"
-                href="https://www.google.com/maps/place/Menuettv%C3%A4gen+2,+711+35+Lindesberg/@59.6101962,15.2085963,17z/data=!3m1!4b1!4m6!3m5!1s0x465c4c00a46db49d:0xf74edb0b14e827de!8m2!3d59.6101935!4d15.2111712!16s%2Fg%2F11c4ymwmlq?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
+                className="whitespace-pre-line text-lg font-light hover:text-orange-500 md:text-lg"
+                href="https://www.google.com/maps/place/Vallgatan,+Skara/@58.3830191,13.4386999,592m/data=!3m2!1e3!4b1!4m6!3m5!1s0x465ae00e35ccf57b:0x5c369d36e9045fe4!8m2!3d58.3830163!4d13.4412748!16s%2Fg%2F1td9tqv5?entry=ttu&g_ep=EgoyMDI1MDYzMC4wIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
               >
-                {`Menuettvägen 2\n711 35 Lindesberg`}
+                {`Vallgatan,\n532 37 Skara`}
               </Link>
               <Link
-                className="text-lg font-light hover:text-cyan-500 md:text-lg"
+                className="text-lg font-light hover:text-orange-500 md:text-lg"
                 href={`tel:${content.company.phone}`}
               >
                 {content.company.phone}
               </Link>
               <Link
-                className="text-lg font-light hover:text-cyan-500 md:text-lg"
+                className="text-lg font-light hover:text-orange-500 md:text-lg"
                 href={`mailto:${content.company.email}`}
               >
                 {content.company.email}
@@ -63,7 +63,7 @@ const Footer = () => {
                   key={social.href}
                   href={social.href}
                   target="_blank"
-                  className="flex w-fit items-center gap-2 text-lg font-light hover:text-cyan-500 md:text-lg"
+                  className="flex w-fit items-center gap-2 text-lg font-light hover:text-orange-500 md:text-lg"
                 >
                   <ArrowUpRight size={16} />
                   {social.name}
@@ -79,7 +79,7 @@ const Footer = () => {
             className="!relative fill-white text-background"
             fill
             alt="Logo"
-            src="/logo_white.png"
+            src="/logo.svg"
           />
         </Link>
         <hr className="border-background/25" />

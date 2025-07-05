@@ -9,16 +9,16 @@ import { twMerge } from "tailwind-merge";
 export const metadata: Metadata = {
   title: "Projekt",
   openGraph: {
-    title: "TC Elservice | Projekt",
+    title: "Adler Byggservice | Projekt",
     description: "Titta närmare på några av våra tidigare projekt",
     url: "/projekt",
-    siteName: "TC Elservice",
+    siteName: "Adler Byggservice",
     images: [
       {
         url: "/hero-image.webp",
         width: 1200,
         height: 630,
-        alt: "TC Elservice | Projekt",
+        alt: "Adler Byggservice | Projekt",
       },
     ],
     locale: "sv_SE",
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@",
-    title: "TC Elservice",
+    title: "Adler Byggservice",
     images: [
       {
         url: "/hero-image.webp",
         width: 1200,
         height: 630,
-        alt: "TC Elservice - Projekt",
+        alt: "Adler Byggservice - Projekt",
       },
     ],
     description: "Titta närmare på några av våra tidigare projekt",

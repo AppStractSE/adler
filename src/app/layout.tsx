@@ -7,22 +7,22 @@ import { Toaster } from "react-hot-toast";
 import "./globals.scss";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://dev.tc-elservice.se"),
+  metadataBase: new URL("https://dev.adlersbyggservice.se"),
   title: {
-    template: "%s | TC Elservice",
-    default: "Vi har lösningen | TC Elservice",
+    template: "%s | Adler Byggservice",
+    default: "Alltid med kvalitet i fokus | Adler Byggservice",
   },
   openGraph: {
-    title: "TC Elservice",
-    description: "Vi har lösningen",
+    title: "Adler Byggservice",
+    description: "Alltid med kvalitet i fokus",
     url: "/",
-    siteName: "TC Elservice",
+    siteName: "Adler Byggservice",
     images: [
       {
         url: "/hero-image.webp",
         width: 1200,
         height: 630,
-        alt: "TC Elservice - Vi har lösningen",
+        alt: "Adler Byggservice - Alltid med kvalitet i fokus",
       },
     ],
     locale: "sv_SE",
@@ -31,16 +31,16 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@",
-    title: "TC Elservice",
+    title: "Adler Byggservice",
     images: [
       {
         url: "/hero-image.webp",
         width: 1200,
         height: 630,
-        alt: "TC Elservice - Vi har lösningen",
+        alt: "Adler Byggservice - Alltid med kvalitet i fokus",
       },
     ],
-    description: "Vi har lösningen",
+    description: "Alltid med kvalitet i fokus",
   },
   robots: "max-image-preview:large",
 };

@@ -114,7 +114,7 @@ const ContactForm = () => {
   };
 
   const baseClasses =
-    "text-base w-full px-4 py-2.5 border-primary/25 shadow-sm rounded-md focus:outline-none border tracking-widest ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
+    "text-base w-full px-4 py-2.5 border-primary/25 shadow-sm rounded-sm focus:outline-none border tracking-widest ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
 
   const errorClass =
     "outline outline-1 outline-offset-0 outline-red-500 placeholder:text-red-500";
@@ -249,13 +249,13 @@ const ContactForm = () => {
             <SelectTrigger
               className={twMerge(
                 baseClasses,
-                "rounded bg-white",
+                "rounded-sm bg-white",
                 errors["Service"] ? errorClass : "",
               )}
             >
               <SelectValue placeholder="Vad behöver du hjälp med?" />
             </SelectTrigger>
-            <SelectContent className="rounded bg-white">
+            <SelectContent className="rounded-sm bg-white">
               <SelectGroup>
                 <SelectLabel>Välj en tjänst</SelectLabel>
                 {content.services.map((service) => (
@@ -319,7 +319,7 @@ const ContactForm = () => {
         <button
           disabled={isSubmitting || formSubmitted}
           type="submit"
-          className="inline-flex w-full items-center justify-center rounded-md bg-primary/90 px-4 py-4 text-background ring-1 ring-background backdrop-blur-sm hover:bg-primary"
+          className="inline-flex w-full items-center justify-center rounded-sm bg-primary/90 px-4 py-4 text-background ring-1 ring-background backdrop-blur-sm hover:bg-primary"
         >
           {isSubmitting ? (
             <Spinner
@@ -355,7 +355,7 @@ const ContactForm = () => {
           </p>
           <button
             onClick={() => setFormSubmitted(false)}
-            className="inline-block rounded-md bg-primary p-2 px-4 text-center text-xs text-background transition-all duration-200 ease-in-out"
+            className="inline-block rounded-sm bg-primary p-2 px-4 text-center text-xs text-background transition-all duration-200 ease-in-out"
           >
             Stäng
           </button>

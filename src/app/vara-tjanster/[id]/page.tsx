@@ -13,23 +13,21 @@ export async function generateStaticParams() {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function generateMetadata({ params }: any) {
   const param = await params;
-  const service = content.services.find(
-    (service) => service.id === param.id,
-  );
+  const service = content.services.find((service) => service.id === param.id);
   if (!service) redirect("/404");
   return {
     title: service.title,
     openGraph: {
-      title: `TC Elservice | ${service.title}`,
+      title: `Adler Byggservice | ${service.title}`,
       description: service.description,
       url: `/vara-tjanster/${service.id}`,
-      siteName: "TC Elservice",
+      siteName: "Adler Byggservice",
       images: [
         {
           url: `/${service.image}`,
           width: 1200,
           height: 630,
-          alt: `TC Elservice | ${service.title}`,
+          alt: `Adler Byggservice | ${service.title}`,
         },
       ],
       locale: "sv_SE",
@@ -38,13 +36,13 @@ export async function generateMetadata({ params }: any) {
     twitter: {
       card: "summary_large_image",
       site: "@",
-      title: "TC Elservice",
+      title: "Adler Byggservice",
       images: [
         {
           url: `/${service.image}`,
           width: 1200,
           height: 630,
-          alt: `TC Elservice | ${service.title}`,
+          alt: `Adler Byggservice | ${service.title}`,
         },
       ],
       description: service.description,

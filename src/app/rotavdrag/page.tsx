@@ -5,16 +5,16 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Rotavdrag",
   openGraph: {
-    title: "TC Elservice | Rotavdrag",
-    description: "Välkommen till TC Elservice",
+    title: "Adler Byggservice | Rotavdrag",
+    description: "Välkommen till Adler Byggservice",
     url: "/om-oss",
-    siteName: "TC Elservice",
+    siteName: "Adler Byggservice",
     images: [
       {
         url: "/image006.webp",
         width: 1200,
         height: 630,
-        alt: "TC Elservice | Rotavdrag",
+        alt: "Adler Byggservice | Rotavdrag",
       },
     ],
     locale: "sv_SE",
@@ -23,16 +23,16 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@",
-    title: "TC Elservice",
+    title: "Adler Byggservice",
     images: [
       {
         url: "/image006.webp",
         width: 1200,
         height: 630,
-        alt: "TC Elservice - Rotavdrag",
+        alt: "Adler Byggservice - Rotavdrag",
       },
     ],
-    description: "Välkommen till TC Elservice",
+    description: "Välkommen till Adler Byggservice",
   },
 };
 

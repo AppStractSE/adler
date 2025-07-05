@@ -6,11 +6,11 @@
     }
 
     .splide__pagination__page.is-active {
-        @apply opacity-100 w-2 h-2 scale-100 rounded-full bg-primary #{!important};
+        @apply opacity-100 w-2 h-2 scale-100 rounded-sm bg-primary #{!important};
     }
 
     .splide__pagination__page {
-        @apply bg-primary/40 transition-all duration-200 ease-in-out w-2 h-2 rounded-full #{!important};
+        @apply bg-primary/40 transition-all duration-200 ease-in-out w-2 h-2 rounded-sm #{!important};
     }
 }
 

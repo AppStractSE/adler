@@ -50,7 +50,7 @@ const CardWithOverlay = ({
         </div>
         <Link
           href={href}
-          className="flex w-fit items-center gap-2 transition-all duration-200 ease-in-out hover:gap-3 hover:text-cyan-500"
+          className="flex w-fit items-center gap-2 transition-all duration-200 ease-in-out hover:gap-3 hover:text-orange-500"
         >
           <ArrowRight size={18} />
           <p className="text-base font-medium underline underline-offset-4">

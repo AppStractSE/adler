@@ -24,7 +24,7 @@ const MainLinks = ({ currentPath }: MainLinksProps) => {
         const isHome = mainLink.href === "/" && currentPath === `/`;
         const isMainActive = isHome || currentPath === mainLink.href;
         const baseClassNames =
-          " transition-all duration-100 ease-in-out flex items-center hover:text-cyan-500";
+          " transition-all duration-100 ease-in-out flex items-center hover:text-orange-500";
 
         const { isActiveClassNames: mainActiveClass } =
           isActiveLink(isMainActive);
@@ -44,7 +44,7 @@ const MainLinks = ({ currentPath }: MainLinksProps) => {
 };
 
 function isActiveLink(isActive: boolean) {
-  const isActiveClassNames = isActive ? "text-cyan-500" : "";
+  const isActiveClassNames = isActive ? "text-orange-500" : "";
   return { isActiveClassNames };
 }
 
@@ -92,17 +92,19 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
           )}
         >
           <div className="flex items-center justify-between">
-            <Image
-              priority
-              quality={100}
-              width={150}
-              height={32}
-              alt="Logo"
-              src="/logo.png"
-            />
+            <div className="w-1/2">
+              <Image
+                priority
+                quality={100}
+                fill
+                alt="Logo"
+                src="/logo_blk.png"
+                className="!relative"
+              />
+            </div>
             <button
               onClick={handleToggle}
-              className="rounded-full border border-primary/75 p-1"
+              className="rounded-sm border border-primary/75 p-1"
             >
               <X size={28} className="text-primary/75" />
             </button>
@@ -119,7 +121,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
                 key={serviceLink.label}
                 href={serviceLink.href}
                 className={twMerge(
-                  "group relative block overflow-hidden rounded-md",
+                  "group relative block overflow-hidden rounded-sm",
                 )}
               >
                 <Image
@@ -152,7 +154,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex w-fit items-center gap-2 hover:text-cyan-500"
+                  className="flex w-fit items-center gap-2 hover:text-orange-500"
                 >
                   <ArrowUpRight />
                   <span>{social.name}</span>

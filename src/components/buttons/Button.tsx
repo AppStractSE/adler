@@ -13,7 +13,7 @@ const Button = ({ href, text, icon, className }: Props) => {
     <Link
       href={href}
       className={twMerge(
-        "flex w-fit items-center justify-center rounded-full bg-primary/90 px-6 py-2.5 text-base text-background transition-all duration-300 ease-in-out hover:bg-primary",
+        "flex w-fit items-center justify-center rounded-sm bg-primary/90 px-6 py-2.5 text-base text-background transition-all duration-300 ease-in-out hover:bg-primary",
         icon && "items-center gap-2",
         className,
       )}

@@ -46,7 +46,7 @@ const ProjectsSection = ({ className }: Props) => {
           <div className="mt-12 flex justify-center">
             <button
               onClick={LoadMore}
-              className="flex w-fit items-center justify-center rounded-full bg-cyan-900 px-6 py-2.5 text-base text-background transition-all duration-300 ease-in-out hover:bg-cyan-800"
+              className="flex w-fit items-center justify-center rounded-sm bg-orange-900 px-6 py-2.5 text-base text-background transition-all duration-300 ease-in-out hover:bg-orange-800"
             >
               Visa fler
             </button>
