@@ -66,7 +66,7 @@ const Header = () => {
                   "h-6 min-w-[1.5px] bg-white transition-all duration-100 ease-in-out",
                 )}
               />
-              <Link href="/" className="h-auto w-52">
+              <Link href="/" className="h-auto w-32 md:w-52">
                 <Image
                   priority
                   quality={100}
