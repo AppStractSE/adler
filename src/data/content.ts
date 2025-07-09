@@ -49,6 +49,7 @@ export const content = {
       description:
         "Vi utför kompletta badrumsrenoveringar enligt branschstandard.",
       video: "/badrumsrenovering.mp4",
+      image: "/adler-byggservice.png",
     },
     {
       id: "altan",
@@ -58,6 +59,7 @@ export const content = {
         "En välbyggd altan förlänger ditt hem ut i det fria och skapar en naturlig samlingsplats. Vi bygger altaner, trädäck och uterum som passar din stil, tomt och dina behov. Alltid med kvalitet och estetik i fokus.",
       description: "Vi bygger altaner, trädäck, pergolor och andra utemiljöer.",
       video: "/tradack-uteplats.mp4",
+      image: "/adler-byggservice.png",
     },
     {
       id: "renovering",
@@ -67,6 +69,7 @@ export const content = {
         "Drömmer du om ett nytt kök, ett fräscht badrum eller ett modernare vardagsrum? Vi hjälper dig att förverkliga dina idéer med noggrannhet, kvalitet och yrkesstolthet. Oavsett om det är en liten uppfräschning eller en omfattande totalrenovering ser vi till att resultatet blir hållbart och snyggt – precis som du vill ha det.",
       description: "Vi utför alla typer av renoveringar i hem och lokaler.",
       video: "/renovering.mp4",
+      image: "/adler-byggservice.png",
     },
     {
       id: "tillbyggnad",
@@ -77,6 +80,7 @@ export const content = {
       description:
         "Vi bygger till exempelvis uterum, extra våningar eller utbyggda vardagsrum.",
       video: "/tillbyggnad.mp4",
+      image: "/adler-byggservice.png",
     },
     {
       id: "tak",
@@ -86,6 +90,7 @@ export const content = {
         "Ett pålitligt tak är avgörande för husets hållbarhet. Vi hjälper dig med allt från ny takläggning till renovering och reparation, alltid med fokus på kvalitet och täthet. Låt oss ta hand om ditt tak – så kan du känna dig trygg, oavsett väder.",
       description: "Vi utför takläggning, omläggning och reparation av tak.",
       video: "/takrenovering.mp4",
+      image: "/adler-byggservice.png",
     },
     {
       id: "nybyggnation",
@@ -96,6 +101,7 @@ export const content = {
       description:
         "Vi bygger nytt – från små attefallshus till större bostäder.",
       video: "/tradack-uteplats.mp4",
+      image: "/adler-byggservice.png",
     },
     {
       id: "kok",
@@ -106,6 +112,7 @@ export const content = {
       description:
         "Vi monterar och anpassar kök – både standard och speciallösningar.",
       video: "/tradack-uteplats.mp4",
+      image: "/adler-byggservice.png",
     },
   ],
   projects: [

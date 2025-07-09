@@ -1,5 +1,6 @@
 import ContactForm from "@/components/forms/ContactForm";
 import Image from "next/image";
+import { Suspense } from "react";
 import { twMerge } from "tailwind-merge";
 
 const ContactSection = () => {
@@ -26,7 +27,9 @@ const ContactSection = () => {
           />
         </div>
         <div className="basis-4/12">
-          <ContactForm />
+          <Suspense>
+            <ContactForm />
+          </Suspense>
         </div>
       </div>
     </section>
