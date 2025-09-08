@@ -37,8 +37,8 @@ const Header = () => {
   }, [pathname]);
 
   const buttonBaseClasses = twMerge(
-    "px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm tracking-wide font-medium hover:rounded-sm transition-all duration-100 ease-in-out",
-    isScrolled ? "hover:text-orange-500" : "hover:text-orange-400",
+    "px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm rounded-sm hover:bg-neutral-600/75 hover:text-background hover:shadow tracking-wide font-medium transition-all duration-100 ease-in-out",
+    isScrolled ? "" : "",
   );
 
   return (
@@ -97,7 +97,7 @@ const Header = () => {
                 href="/offertforfragan"
                 className={twMerge(
                   buttonBaseClasses,
-                  "min-w-fit rounded-sm bg-orange-400 text-primary hover:bg-orange-500 hover:text-primary",
+                  "min-w-fit bg-neutral-500/75",
                 )}
               >
                 Offertförfrågan

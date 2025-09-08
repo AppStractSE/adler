@@ -51,7 +51,7 @@ const ServicesSection = ({ className }: Props) => {
               </div>
               <Link
                 href={`/vara-tjanster/${service.id}`}
-                className="flex w-fit items-center gap-2 transition-all duration-200 ease-in-out hover:gap-3 hover:text-orange-500"
+                className="flex w-fit items-center gap-2 transition-all duration-200 ease-in-out hover:gap-3 hover:text-neutral-500"
               >
                 <ArrowRight size={18} />
                 <p className="text-base font-medium underline underline-offset-4">
@@ -65,7 +65,7 @@ const ServicesSection = ({ className }: Props) => {
           <div className="mt-12 flex justify-center">
             <button
               onClick={LoadMore}
-              className="flex w-fit items-center justify-center rounded-full bg-orange-600 px-6 py-2.5 text-base text-background transition-all duration-300 ease-in-out hover:bg-orange-600/90"
+              className="flex w-fit items-center justify-center rounded-full bg-neutral-600 px-6 py-2.5 text-base text-background transition-all duration-300 ease-in-out hover:bg-neutral-600/90"
             >
               Ladda fler tjänster
             </button>

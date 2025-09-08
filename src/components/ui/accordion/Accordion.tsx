@@ -12,7 +12,7 @@ interface AccordionProps {
 
 const Accordion = ({ title, children, setIsOpen, isOpen }: AccordionProps) => {
   return (
-    <div className="border-b border-gray-300 pb-4">
+    <div className="border-b border-neutral-300 pb-4">
       <button
         className="flex w-full items-center justify-between focus:outline-none"
         onClick={setIsOpen}
@@ -33,7 +33,7 @@ const Accordion = ({ title, children, setIsOpen, isOpen }: AccordionProps) => {
             : "invisible h-0 max-h-0 opacity-0",
         )}
       >
-        <div className="px-2 text-gray-700">{children}</div>
+        <div className="px-2 text-neutral-700">{children}</div>
       </div>
     </div>
   );

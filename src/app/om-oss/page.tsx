@@ -48,7 +48,7 @@ export default function Page() {
         text="Allt du förväntar dig"
         image="/hero-image004.webp"
       />
-      <CenteredSection className="border-b border-gray-300">
+      <CenteredSection className="border-b border-neutral-300">
         <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
           Er byggpartner i Skara
         </h2>
@@ -58,13 +58,13 @@ export default function Page() {
       </CenteredSection>
       <TwoPaneSection
         rtl
-        className="border-b border-gray-300"
+        className="border-b border-neutral-300"
         image="/adler-byggservice.png"
         title="Vår historia"
         text={`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi odit magni, asperiores harum dolor in blanditiis odio consequuntur nostrum deserunt quo reiciendis eos? Ipsam voluptatibus eius alias laborum ducimus eos?`}
       />
       <TwoPaneSection
-        className="border-b border-gray-300"
+        className="border-b border-neutral-300"
         image="/image006.webp"
         title="Våra värderingar"
         text={`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi odit magni, asperiores harum dolor in blanditiis odio consequuntur nostrum deserunt quo reiciendis eos? Ipsam voluptatibus eius alias laborum ducimus eos?`}

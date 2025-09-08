@@ -37,9 +37,9 @@ const Range = ({
         max={max}
         step={step}
         onChange={(e) => setValue(parseInt(e.target.value))}
-        className="range-lg thumb-slider h-4 w-full cursor-pointer appearance-none rounded-full border border-gray-400 -mr-0.5"
+        className="range-lg thumb-slider -mr-0.5 h-4 w-full cursor-pointer appearance-none rounded-full border border-neutral-400"
         style={{
-          background: `linear-gradient(to right, #7c2d12 0%, #f97316 ${
+          background: `linear-gradient(to right, #6b6b6b 0%, #161616 ${
             (value / max) * 99.5
           }%, rgba(0,0,0,.05) ${(value / max) * 100}%, rgba(0,0,0,.05) 100%)`,
         }}

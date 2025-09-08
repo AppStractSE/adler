@@ -50,7 +50,7 @@ const HeroSection = ({ className }: Props) => {
               <Button
                 href="/vara-tjanster"
                 text="Se våra tjänster"
-                className="min-w-fit bg-orange-400 px-8 text-primary hover:bg-orange-500 md:text-lg"
+                className="min-w-fit bg-neutral-700 px-8 hover:bg-neutral-600 md:text-lg"
                 icon={<ArrowRight size={20} />}
               />
             </div>

@@ -24,7 +24,7 @@ const MainLinks = ({ currentPath }: MainLinksProps) => {
         const isHome = mainLink.href === "/" && currentPath === `/`;
         const isMainActive = isHome || currentPath === mainLink.href;
         const baseClassNames =
-          " transition-all duration-100 ease-in-out flex items-center hover:text-orange-500";
+          " transition-all duration-200 ease-in-out flex items-center hover:text-stone-500";
 
         const { isActiveClassNames: mainActiveClass } =
           isActiveLink(isMainActive);
@@ -44,7 +44,7 @@ const MainLinks = ({ currentPath }: MainLinksProps) => {
 };
 
 function isActiveLink(isActive: boolean) {
-  const isActiveClassNames = isActive ? "text-orange-500" : "";
+  const isActiveClassNames = isActive ? "text-stone-500" : "";
   return { isActiveClassNames };
 }
 
@@ -72,22 +72,20 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
     <aside className="relative">
       <div
         className={twMerge(
-          "fixed inset-0 z-50 h-screen w-screen transform overflow-hidden backdrop-blur-sm transition-all duration-500 ease-in-out",
-          !isOpen
-            ? "pointer-events-none invisible opacity-0 delay-200"
-            : "visible opacity-100",
+          "fixed inset-0 z-50 h-screen w-screen transform overflow-hidden transition-all duration-300 ease-in-out",
+          !isOpen ? "pointer-events-none invisible" : "visible",
         )}
       >
         <div
           className={twMerge(
-            "h-full w-screen overflow-hidden bg-black transition-all duration-500",
+            "h-full w-screen overflow-hidden bg-black transition-all duration-200",
             isOpen ? "opacity-50" : "opacity-0",
           )}
           onClick={handleToggle}
         />
         <div
           className={twMerge(
-            "absolute left-0 top-0 flex h-full w-screen max-w-screen-sm transform flex-col space-y-8 overflow-auto bg-background px-4 py-4 shadow-xl transition-all duration-500 ease-in-out md:border-r md:px-12 md:py-12 lg:bg-opacity-90",
+            "absolute left-0 top-0 flex h-full w-screen max-w-[500px] transform flex-col space-y-8 overflow-auto bg-background px-4 py-4 shadow-xl transition-all duration-200 ease-in-out md:border-r md:px-12 md:py-12 lg:bg-opacity-90",
             isOpen ? "translate-x-0" : "-translate-x-full",
           )}
         >
@@ -109,13 +107,13 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
               <X size={28} className="text-primary/75" />
             </button>
           </div>
-          <hr className="border-gray-300" />
+          <hr className="border-stone-300" />
           <MainLinks currentPath={pathname} />
-          <hr className="border-gray-300" />
+          <hr className="border-stone-300" />
           <h6 className="text-base tracking-wide text-black">
             Upptäck våra tjänster
           </h6>
-          <div className="grid grid-cols-2 gap-2 md:grid-cols-3">
+          <div className="grid grid-cols-2 gap-2">
             {serviceLinks.map((serviceLink) => (
               <Link
                 key={serviceLink.label}
@@ -132,7 +130,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
                   alt={serviceLink.label}
                   className="!relative aspect-square w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black/40 transition-all duration-1000 ease-in-out group-hover:bg-black/10">
+                <div className="duration-2000 absolute inset-0 bg-black/40 transition-all ease-in-out group-hover:bg-black/10">
                   <div className="flex h-full w-full items-center justify-center">
                     <div className="p-2 text-center text-sm text-background md:text-base">
                       {serviceLink.label}
@@ -142,7 +140,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
               </Link>
             ))}
           </div>
-          <hr className="border-gray-300" />
+          <hr className="border-stone-300" />
           <div className="flex flex-col gap-4">
             <h6 className="text-base tracking-wide text-black">
               {content.followUs}
@@ -154,7 +152,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex w-fit items-center gap-2 hover:text-orange-500"
+                  className="flex w-fit items-center gap-2 hover:text-stone-500"
                 >
                   <ArrowUpRight />
                   <span>{social.name}</span>

@@ -143,7 +143,7 @@ export default function Page() {
             href: "/vara-tjanster/" + service.id,
             text: "Läs mer",
           }}
-          className="border-b border-gray-300"
+          className="border-b border-neutral-300"
           image={service.image}
           title={service.title}
           text={service.description}
@@ -236,7 +236,7 @@ export default function Page() {
           href: "/rotavdrag",
           text: "Räkna ut ROT-avdrag",
         }}
-        className="border-b border-gray-300"
+        className="border-b border-neutral-300"
         title="Hur räknar jag ut ROT-avdrag?"
         text={`Planera och utnyttja rotavdraget för att minska kostnaderna för dina elinstallationer vid renovering eller nybyggnation. Våra lösningar säkerställer ett effektivt utförande, där du enkelt kan dra nytta av skatteavdraget för ett ekonomiskt resultat.`}
       />
