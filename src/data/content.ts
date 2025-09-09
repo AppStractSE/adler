@@ -21,7 +21,7 @@ export const content = {
   },
   company: {
     name: "Adler Byggservice",
-    email: "info@adlerbygg.se",
+    email: "info@adlerbyggservice.se",
     phone: "+46 70-582 99 13",
     address: "Vallgatan, 532 37 Skara",
   },
@@ -41,80 +41,70 @@ export const content = {
   },
   services: [
     {
-      id: "badrum",
-      title: "Badrumsrenovering",
-      sellingPointTitle: "Ett badrum att trivas i – varje dag",
-      sellingPointDesc:
-        "Vi hjälper dig att skapa ett badrum som både är funktionellt och estetiskt tilltalande. Med fokus på våtrumssäkerhet och smart planering ser vi till att varje detalj sitter där den ska. Från rivning till färdigställande – vi tar ansvar för hela processen.",
-      description:
-        "Vi utför kompletta badrumsrenoveringar enligt branschstandard.",
-      video: "/badrumsrenovering.mp4",
-      image: "/adler-byggservice.png",
-    },
-    {
-      id: "altan",
-      title: "Altan & uteplats",
-      sellingPointTitle: "Njut mer av sommaren med en altan du älskar",
-      sellingPointDesc:
-        "En välbyggd altan förlänger ditt hem ut i det fria och skapar en naturlig samlingsplats. Vi bygger altaner, trädäck och uterum som passar din stil, tomt och dina behov. Alltid med kvalitet och estetik i fokus.",
-      description: "Vi bygger altaner, trädäck, pergolor och andra utemiljöer.",
-      video: "/tradack-uteplats.mp4",
-      image: "/adler-byggservice.png",
-    },
-    {
-      id: "renovering",
-      title: "Renovering",
-      sellingPointTitle: "Ge ditt hem nytt liv med en trygg renovering",
-      sellingPointDesc:
-        "Drömmer du om ett nytt kök, ett fräscht badrum eller ett modernare vardagsrum? Vi hjälper dig att förverkliga dina idéer med noggrannhet, kvalitet och yrkesstolthet. Oavsett om det är en liten uppfräschning eller en omfattande totalrenovering ser vi till att resultatet blir hållbart och snyggt – precis som du vill ha det.",
-      description: "Vi utför alla typer av renoveringar i hem och lokaler.",
-      video: "/renovering.mp4",
-      image: "/adler-byggservice.png",
-    },
-    {
-      id: "tillbyggnad",
-      title: "Tillbyggnad",
-      sellingPointTitle: "Mer plats för livet – med en smart tillbyggnad",
-      sellingPointDesc:
-        "Behöver du mer utrymme för familjen, jobbet eller hobbyrummet? Vi hjälper dig att bygga ut huset på ett sätt som harmoniserar med den befintliga byggnaden. Med smarta lösningar och full kontroll över hela processen skapar vi den extra plats du behöver – utan krångel.",
-      description:
-        "Vi bygger till exempelvis uterum, extra våningar eller utbyggda vardagsrum.",
-      video: "/tillbyggnad.mp4",
-      image: "/adler-byggservice.png",
-    },
-    {
       id: "tak",
       title: "Takarbeten",
       sellingPointTitle: "Skydda ditt hem från topp till tå",
       sellingPointDesc:
         "Ett pålitligt tak är avgörande för husets hållbarhet. Vi hjälper dig med allt från ny takläggning till renovering och reparation, alltid med fokus på kvalitet och täthet. Låt oss ta hand om ditt tak – så kan du känna dig trygg, oavsett väder.",
-      description: "Vi utför takläggning, omläggning och reparation av tak.",
+      description: "Vi utför takbyten, omläggning och reparation av tak.",
       video: "/takrenovering.mp4",
       image: "/adler-byggservice.png",
     },
     {
-      id: "nybyggnation",
-      title: "Nybyggnation",
-      sellingPointTitle: "Från idé till inflyttning – vi bygger ditt drömhem",
+      id: "kok",
+      title: "Köksrenovering & montering",
+      sellingPointTitle: "Ett kök som är både praktiskt och snyggt",
       sellingPointDesc:
-        "Ska du bygga nytt? Vi hjälper dig hela vägen, från grund till färdig byggnad. Med lång erfarenhet och öga för detaljer skapar vi hållbara hus, attefallshus, garage eller fritidshus – allt anpassat efter dina behov och önskemål.",
+        "Köket är hemmets hjärta. Vi hjälper dig med allt från renovering till montering av nya kök, alltid med fokus på funktion och design. Med oss får du ett kök du kan trivas i varje dag.",
       description:
-        "Vi bygger nytt – från små attefallshus till större bostäder.",
+        "Vi utför köksrenoveringar samt monterar kök från alla större leverantörer.",
       video: "/tradack-uteplats.mp4",
       image: "/adler-byggservice.png",
     },
     {
-      id: "kok",
-      title: "Köksmontering",
-      sellingPointTitle: "Ditt drömkök – professionellt monterat",
+      id: "fonster",
+      title: "Fönster & dörrar",
+      sellingPointTitle: "Mer ljus, bättre energi – med nya fönster och dörrar",
       sellingPointDesc:
-        "Köket är hemmets hjärta. Vi monterar kök från alla stora leverantörer och anpassar efter mått, funktion och estetik. Med precision och noggrannhet ser vi till att ditt nya kök fungerar och ser ut precis som du tänkt dig.",
-      description:
-        "Vi monterar och anpassar kök – både standard och speciallösningar.",
+        "Vi byter fönster och dörrar på ett säkert och professionellt sätt. Med rätt lösningar förbättrar du både energiförbrukning, ljudmiljö och hemmets estetik.",
+      description: "Vi utför fönster- och dörrbyten i alla typer av byggnader.",
+      video: "/renovering.mp4",
+      image: "/adler-byggservice.png",
+    },
+    {
+      id: "altan",
+      title: "Altaner & uterum",
+      sellingPointTitle: "Njut mer av sommaren med en altan eller ett uterum",
+      sellingPointDesc:
+        "En välbyggd altan eller ett uterum förlänger ditt hem ut i det fria och skapar en naturlig samlingsplats. Vi bygger altaner, trädäck och uterum anpassade efter din stil och tomt.",
+      description: "Vi bygger altaner, uterum och andra utemiljöer.",
       video: "/tradack-uteplats.mp4",
       image: "/adler-byggservice.png",
     },
+    {
+      id: "renovering",
+      title: "Renoveringar",
+      sellingPointTitle: "Ge nytt liv åt ditt hem eller din fastighet",
+      sellingPointDesc:
+        "Oavsett om det gäller invändig eller utvändig renovering tar vi hand om hela processen – från planering till färdigt resultat. Vi renoverar bostäder, ladugårdar och mycket mer.",
+      description:
+        "Vi utför renoveringar både invändigt och utvändigt, inklusive ladugårdsrenoveringar.",
+      video: "/renovering.mp4",
+      image: "/adler-byggservice.png",
+    },
+    {
+      id: "special",
+      title: "Specialarbeten",
+      sellingPointTitle: "Unika lösningar för unika miljöer",
+      sellingPointDesc:
+        "Behöver du något utöver det vanliga? Vi bygger allt från gångbroar och fågeltorn till vindskydd, sittbänkar och ekoparksdetaljer. Hantverk med kvalitet och kreativitet.",
+      description:
+        "Vi utför specialarbeten som gångbroar, fågeltorn, hänvisningsskyltar, vindskydd, sittbänkar och fikabord i lärkträ.",
+      video: "/tillbyggnad.mp4",
+      image: "/adler-byggservice.png",
+    },
   ],
+
   projects: [
     {
       id: "solceller-i-bollebygd",

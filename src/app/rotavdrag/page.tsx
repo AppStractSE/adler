@@ -40,9 +40,9 @@ export default function Page() {
   return (
     <>
       <SubPageHeroSection
-        title="Rotavdrag"
-        text="Räkna ut ROT-avdrag här"
-        image="/hero-image005.webp"
+        title="ROT-avdrag"
+        text="Få avdrag på arbetskostnaden när du renoverar, bygger om eller bygger till."
+        image="/rotavdrag.jpg"
       />
       <RotavdragSection />
     </>

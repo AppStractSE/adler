@@ -42,8 +42,7 @@ export default function Page() {
     <Suspense>
       <SubPageHeroSection
         title="Offertförfrågan"
-        text="Få en offert redan idag"
-        image="/hero-image003.webp"
+        text="Få en kostnadsfri offert på ditt byggprojekt."
       />
       <ContactSection />
     </Suspense>

@@ -45,8 +45,7 @@ export default function Page() {
     <>
       <SubPageHeroSection
         title="Om oss"
-        text="Allt du förväntar dig"
-        image="/hero-image004.webp"
+        text="Vi är ett litet byggteam med stort engagemang."
       />
       <CenteredSection className="border-b border-neutral-300">
         <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
