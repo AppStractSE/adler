@@ -61,7 +61,11 @@ export default async function Page({
 
   return (
     <>
-      <SubPageHeroSection title={service.description} text={service.title} />
+      <SubPageHeroSection
+        image={service.image_alternative}
+        title={service.description}
+        text={service.title}
+      />
       <TwoPaneSection
         className="border-b border-neutral-300"
         title={service.sellingPointTitle}

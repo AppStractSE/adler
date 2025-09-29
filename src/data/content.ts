@@ -48,7 +48,8 @@ export const content = {
         "Ett pålitligt tak är avgörande för husets hållbarhet. Vi hjälper dig med allt från ny takläggning till renovering och reparation, alltid med fokus på kvalitet och täthet. Låt oss ta hand om ditt tak – så kan du känna dig trygg, oavsett väder.",
       description: "Vi utför takbyten, omläggning och reparation av tak.",
       video: "/takrenovering.mp4",
-      image: "/adler-byggservice.png",
+      image: "/20210928_154706.jpg",
+      image_alternative: "/Tjänster-takarbeten.jpg",
     },
     {
       id: "kok",
@@ -59,7 +60,8 @@ export const content = {
       description:
         "Vi utför köksrenoveringar samt monterar kök från alla större leverantörer.",
       video: "/tradack-uteplats.mp4",
-      image: "/adler-byggservice.png",
+      image: "/20170228_095912.jpg",
+      image_alternative: "/Tjänster-kök.jpg",
     },
     {
       id: "fonster",
@@ -69,7 +71,8 @@ export const content = {
         "Vi byter fönster och dörrar på ett säkert och professionellt sätt. Med rätt lösningar förbättrar du både energiförbrukning, ljudmiljö och hemmets estetik.",
       description: "Vi utför fönster- och dörrbyten i alla typer av byggnader.",
       video: "/renovering.mp4",
-      image: "/adler-byggservice.png",
+      image: "/IMG_20201121_150556_329.jpg",
+      image_alternative: "/Tjänster-fönster.jpg",
     },
     {
       id: "altan",
@@ -79,7 +82,8 @@ export const content = {
         "En välbyggd altan eller ett uterum förlänger ditt hem ut i det fria och skapar en naturlig samlingsplats. Vi bygger altaner, trädäck och uterum anpassade efter din stil och tomt.",
       description: "Vi bygger altaner, uterum och andra utemiljöer.",
       video: "/tradack-uteplats.mp4",
-      image: "/adler-byggservice.png",
+      image: "/IMG_22191.jpg",
+      image_alternative: "/Tjänster-altan.jpg",
     },
     {
       id: "renovering",
@@ -90,7 +94,8 @@ export const content = {
       description:
         "Vi utför renoveringar både invändigt och utvändigt, inklusive ladugårdsrenoveringar.",
       video: "/renovering.mp4",
-      image: "/adler-byggservice.png",
+      image: "/20230705_114954.jpg",
+      image_alternative: "/Tjänster-renoveringar.jpg",
     },
     {
       id: "special",
@@ -101,7 +106,8 @@ export const content = {
       description:
         "Vi utför specialarbeten som gångbroar, fågeltorn, hänvisningsskyltar, vindskydd, sittbänkar och fikabord i lärkträ.",
       video: "/tillbyggnad.mp4",
-      image: "/adler-byggservice.png",
+      image: "/20231221_130143.jpg",
+      image_alternative: "/Tjänster-specialarbeten.jpg",
     },
   ],
 

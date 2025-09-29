@@ -1,7 +1,7 @@
 "use client";
 import { content } from "@/data/content";
 import { socials } from "@/data/socials";
-import { ArrowUpRight, X } from "lucide-react";
+import { ArrowUpRight, Drill, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -35,6 +35,9 @@ const MainLinks = ({ currentPath }: MainLinksProps) => {
             href={mainLink.href}
             className={twMerge(baseClassNames, mainActiveClass)}
           >
+            {isMainActive ? (
+              <Drill size={24} className="mr-2 text-stone-500" />
+            ) : null}
             <span>{mainLink.label}</span>
           </Link>
         );
@@ -85,7 +88,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
         />
         <div
           className={twMerge(
-            "absolute left-0 top-0 flex h-full w-screen max-w-[500px] transform flex-col space-y-8 overflow-auto bg-background px-4 py-4 shadow-xl transition-all duration-200 ease-in-out md:border-r md:px-12 md:py-12 lg:bg-opacity-90",
+            "absolute left-0 top-0 flex h-full w-screen max-w-[500px] transform flex-col gap-6 overflow-auto bg-background px-4 py-4 shadow-xl transition-all duration-200 ease-in-out md:border-r md:px-12 md:py-12 lg:bg-opacity-90",
             isOpen ? "translate-x-0" : "-translate-x-full",
           )}
         >
@@ -110,35 +113,47 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
           <hr className="border-stone-300" />
           <MainLinks currentPath={pathname} />
           <hr className="border-stone-300" />
-          <h6 className="text-base tracking-wide text-black">
-            Upptäck våra tjänster
-          </h6>
-          <div className="grid grid-cols-2 gap-2">
-            {serviceLinks.map((serviceLink) => (
-              <Link
-                key={serviceLink.label}
-                href={serviceLink.href}
-                className={twMerge(
-                  "group relative block overflow-hidden rounded-sm",
-                )}
-              >
-                <Image
-                  priority
-                  quality={100}
-                  fill
-                  src={serviceLink.image || "/placeholder.png"}
-                  alt={serviceLink.label}
-                  className="!relative aspect-square w-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-                />
-                <div className="duration-2000 absolute inset-0 bg-black/40 transition-all ease-in-out group-hover:bg-black/10">
-                  <div className="flex h-full w-full items-center justify-center">
-                    <div className="p-2 text-center text-sm text-background md:text-base">
-                      {serviceLink.label}
+          <div className="flex flex-col gap-4">
+            <h6 className="text-base tracking-wide text-black">
+              Upptäck våra tjänster
+            </h6>
+            <div className="grid grid-cols-2 gap-2">
+              {serviceLinks.map((serviceLink) => (
+                <Link
+                  key={serviceLink.label}
+                  href={serviceLink.href}
+                  className={twMerge(
+                    "group relative block overflow-hidden rounded-sm",
+                  )}
+                >
+                  <Image
+                    priority
+                    quality={100}
+                    fill
+                    src={serviceLink.image || "/placeholder.png"}
+                    alt={serviceLink.label}
+                    className={twMerge(
+                      "!relative aspect-square w-full object-cover transition-transform duration-500 ease-in-out",
+                      pathname === serviceLink.href
+                        ? "group-scale-110"
+                        : "group-hover:scale-110",
+                    )}
+                  />
+                  <div
+                    className={twMerge(
+                      "absolute inset-0 transition-all duration-300 ease-in-out",
+                      pathname === serviceLink.href ? "bg-black/5" : "bg-black/50 group-hover:bg-black/5",
+                    )}
+                  >
+                    <div className="flex h-full w-full items-center justify-center">
+                      <div className="p-2 text-center text-sm text-background md:text-base">
+                        {serviceLink.label}
+                      </div>
                     </div>
                   </div>
-                </div>
-              </Link>
-            ))}
+                </Link>
+              ))}
+            </div>
           </div>
           <hr className="border-stone-300" />
           <div className="flex flex-col gap-4">

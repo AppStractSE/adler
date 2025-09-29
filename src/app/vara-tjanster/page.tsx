@@ -52,12 +52,10 @@ export default function Page() {
       />
       <CenteredSection className="overflow-hidden border-b">
         <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
-          Allt för ström & ljus
+          Inget jobb är för stort eller för litet
         </h2>
         <p className="max-w-screen-md whitespace-pre-line text-balance text-center text-base md:text-lg">
-          Smarta och säkra el-lösningar anpassade för alla behov – från hem och
-          företag till industri och offentliga miljöer. Med vår expertis får du
-          trygg och effektiv elservice, oavsett projektets storlek.
+          Stort eller smått, vi hjälper dig med alla typer av byggprojekt. Oavsett om det gäller en mindre installation eller ett större entreprenadprojekt, har vi lösningen för dig.
         </p>
         <SplideWithArrows
           options={{
@@ -123,7 +121,7 @@ export default function Page() {
                   priority
                   quality={100}
                   fill
-                  src={service.image}
+                  src={service.image_alternative}
                   alt={service.title || "Service image"}
                   className="h-full w-full rounded-lg object-cover object-center"
                 />

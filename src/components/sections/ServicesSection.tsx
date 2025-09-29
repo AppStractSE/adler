@@ -2,6 +2,7 @@
 
 import { content } from "@/data/content";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -32,12 +33,10 @@ const ServicesSection = ({ className }: Props) => {
           {content.services.slice(0, visibleCount).map((service, index) => (
             <div key={index} className="flex flex-col gap-6">
               <div className="relative aspect-[2/1] md:aspect-[1.5/1]">
-                <video
-                  playsInline
-                  src={service.video}
-                  autoPlay
-                  loop
-                  muted
+                <Image
+                  fill
+                  alt=""
+                  src={service.image_alternative}
                   className="h-full w-full rounded-sm object-cover object-center"
                 />
               </div>
