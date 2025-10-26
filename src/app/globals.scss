@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   scroll-behavior: smooth;
   font-size: 18px;
 }
@@ -80,4 +80,36 @@ section:not(:first-of-type) {
   }
 }
 
-// @apply [&::-moz-range-thumb]: border [&::-moz-range-thumb]:h-6 [&::-moz-range-thumb]:w-6 [&::-moz-range-thumb]:rounded-sm [&::-moz-range-thumb]:bg-background [&::-webkit-slider-thumb]:h-6 [&::-webkit-slider-thumb]:w-6 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-sm [&::-webkit-slider-thumb]:border [&::-webkit-slider-thumb]:bg-background [&::-webkit-slider-thumb]:shadow-md [&::-webkit-slider-thumb]:transition-all [&::-webkit-slider-thumb]:hover:scale-110 #{important};
+:root {
+  --font-heading: var(--font-josefin-sans);
+  --font-body: var(--font-dm-sans);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), sans-serif;
+}
+
+h1,
+p,
+span,
+li,
+a {
+  font-family: var(--font-body), sans-serif;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.drawer::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.drawer {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}

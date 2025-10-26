@@ -56,7 +56,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <button
-                className={twMerge(buttonBaseClasses, "!p-0")}
+                className={twMerge(buttonBaseClasses, "!p-2 -m-2")}
                 onClick={() => setIsDrawerOpen(!isDrawerOpen)}
               >
                 <MenuIcon size={ICON_SIZE} />
@@ -66,13 +66,13 @@ const Header = () => {
                   "h-6 min-w-[1.5px] bg-white transition-all duration-100 ease-in-out",
                 )}
               />
-              <Link href="/" className="h-auto w-32 md:w-52">
+              <Link href="/" className="h-auto md:w-24">
                 <Image
                   priority
                   quality={100}
                   fill
                   alt="Logo"
-                  src="/logo.png"
+                  src="/logo.svg"
                   className="!relative transition-none duration-0 ease-in-out"
                 />
               </Link>

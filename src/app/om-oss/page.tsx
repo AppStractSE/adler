@@ -48,11 +48,11 @@ export default function Page() {
         text="Vi är ett litet byggteam med stort engagemang."
       />
       <CenteredSection className="border-b border-neutral-300">
-        <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
+        <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl">
           Er byggpartner i Skara
         </h2>
         <p className="max-w-screen-md whitespace-pre-line text-balance text-center text-base md:text-lg">
-          {`Välkommen till Adler Byggservice AB – Er lokala byggpartner i Skara. Inget jobb är för stort eller för litet för oss. Vi erbjuder allt från renoveringar och ombyggnationer till nybyggnationer och tillbyggnader, både inne och ute. Vår passion är att skapa hållbara och funktionella lösningar som möter era behov och önskemål.\n\nVi är stolta över att vara en del av Skara-samhället och ser fram emot att hjälpa er med ert nästa byggprojekt.`}
+          {`Välkommen till Adler Byggservice – Er lokala byggpartner i Skara. Inget jobb är för stort eller för litet för oss. Vi erbjuder allt från renoveringar och ombyggnationer till nybyggnationer och tillbyggnader, både inne och ute. Vår passion är att skapa hållbara och funktionella lösningar som möter era behov och önskemål.\n\nVi är stolta över att vara en del av Skara-samhället och ser fram emot att hjälpa er med ert nästa byggprojekt.`}
         </p>
       </CenteredSection>
       <TwoPaneSection

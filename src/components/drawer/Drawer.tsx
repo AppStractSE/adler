@@ -1,7 +1,7 @@
 "use client";
 import { content } from "@/data/content";
 import { socials } from "@/data/socials";
-import { ArrowUpRight, Drill, X } from "lucide-react";
+import { ArrowUpRight, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -19,12 +19,12 @@ interface MainLinksProps {
 
 const MainLinks = ({ currentPath }: MainLinksProps) => {
   return (
-    <nav className="flex flex-col gap-4 text-2xl tracking-wide md:text-3xl">
+    <nav className="flex flex-col gap-0 text-xl tracking-wide">
       {mainLinks.map((mainLink: DrawerLink) => {
         const isHome = mainLink.href === "/" && currentPath === `/`;
         const isMainActive = isHome || currentPath === mainLink.href;
         const baseClassNames =
-          " transition-all duration-200 ease-in-out flex items-center hover:text-stone-500";
+          " transition-all duration-200 ease-in-out flex items-center px-4 py-2.5 hover:bg-primary/75 hover:text-background";
 
         const { isActiveClassNames: mainActiveClass } =
           isActiveLink(isMainActive);
@@ -35,9 +35,6 @@ const MainLinks = ({ currentPath }: MainLinksProps) => {
             href={mainLink.href}
             className={twMerge(baseClassNames, mainActiveClass)}
           >
-            {isMainActive ? (
-              <Drill size={24} className="mr-2 text-stone-500" />
-            ) : null}
             <span>{mainLink.label}</span>
           </Link>
         );
@@ -47,7 +44,7 @@ const MainLinks = ({ currentPath }: MainLinksProps) => {
 };
 
 function isActiveLink(isActive: boolean) {
-  const isActiveClassNames = isActive ? "text-stone-500" : "";
+  const isActiveClassNames = isActive ? "bg-primary text-background" : "";
   return { isActiveClassNames };
 }
 
@@ -88,33 +85,33 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
         />
         <div
           className={twMerge(
-            "absolute left-0 top-0 flex h-full w-screen max-w-[500px] transform flex-col gap-6 overflow-auto bg-background px-4 py-4 shadow-xl transition-all duration-200 ease-in-out md:border-r md:px-12 md:py-12 lg:bg-opacity-90",
+            "drawer absolute left-0 top-0 flex h-full w-screen max-w-[500px] transform flex-col gap-6 overflow-x-hidden bg-background pb-32 pt-4 shadow-xl transition-all duration-200 ease-in-out lg:bg-opacity-90",
             isOpen ? "translate-x-0" : "-translate-x-full",
           )}
         >
-          <div className="flex items-center justify-between">
-            <div className="w-1/2">
+          <div className="flex items-center justify-between px-4">
+            <div className="h-auto w-1/4">
               <Image
                 priority
                 quality={100}
                 fill
                 alt="Logo"
-                src="/logo_blk.png"
+                src="/logo_blk.svg"
                 className="!relative"
               />
             </div>
             <button
               onClick={handleToggle}
-              className="rounded-sm border border-primary/75 p-1"
+              className="rounded-sm border border-primary p-1 opacity-100 hover:opacity-50"
             >
-              <X size={28} className="text-primary/75" />
+              <X size={28} className="text-primary" />
             </button>
           </div>
           <hr className="border-stone-300" />
           <MainLinks currentPath={pathname} />
           <hr className="border-stone-300" />
-          <div className="flex flex-col gap-4">
-            <h6 className="text-base tracking-wide text-black">
+          <div className="flex flex-col gap-4 px-4">
+            <h6 className="text-lg tracking-wide md:text-xl">
               Upptäck våra tjänster
             </h6>
             <div className="grid grid-cols-2 gap-2">
@@ -142,7 +139,9 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
                   <div
                     className={twMerge(
                       "absolute inset-0 transition-all duration-300 ease-in-out",
-                      pathname === serviceLink.href ? "bg-black/5" : "bg-black/50 group-hover:bg-black/5",
+                      pathname === serviceLink.href
+                        ? "bg-black/5"
+                        : "bg-black/50 group-hover:bg-black/5",
                     )}
                   >
                     <div className="flex h-full w-full items-center justify-center">
@@ -156,8 +155,8 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
             </div>
           </div>
           <hr className="border-stone-300" />
-          <div className="flex flex-col gap-4">
-            <h6 className="text-base tracking-wide text-black">
+          <div className="flex flex-col gap-4 px-4">
+            <h6 className="text-lg tracking-wide md:text-xl">
               {content.followUs}
             </h6>
             <div className="flex flex-col gap-4">

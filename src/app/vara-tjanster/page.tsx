@@ -51,11 +51,13 @@ export default function Page() {
         image="/vara-tjanster.jpg"
       />
       <CenteredSection className="overflow-hidden border-b">
-        <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
+        <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl">
           Inget jobb är för stort eller för litet
         </h2>
         <p className="max-w-screen-md whitespace-pre-line text-balance text-center text-base md:text-lg">
-          Stort eller smått, vi hjälper dig med alla typer av byggprojekt. Oavsett om det gäller en mindre installation eller ett större entreprenadprojekt, har vi lösningen för dig.
+          Stort eller smått, vi hjälper dig med alla typer av byggprojekt.
+          Oavsett om det gäller en mindre installation eller ett större
+          entreprenadprojekt, har vi lösningen för dig.
         </p>
         <SplideWithArrows
           options={{
@@ -148,7 +150,7 @@ export default function Page() {
         />
       ))}
       {/* <CenteredSection className="overflow-hidden border-b">
-        <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
+        <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl">
           Nyfiken på vad vi kan göra?
         </h2>
         <p className="max-w-screen-md whitespace-pre-line text-balance text-center text-base md:text-lg">

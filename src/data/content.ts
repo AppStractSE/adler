@@ -82,7 +82,7 @@ export const content = {
         "En välbyggd altan eller ett uterum förlänger ditt hem ut i det fria och skapar en naturlig samlingsplats. Vi bygger altaner, trädäck och uterum anpassade efter din stil och tomt.",
       description: "Vi bygger altaner, uterum och andra utemiljöer.",
       video: "/tradack-uteplats.mp4",
-      image: "/IMG_22191.jpg",
+      image: "/Tjänster-altan.jpg",
       image_alternative: "/Tjänster-altan.jpg",
     },
     {

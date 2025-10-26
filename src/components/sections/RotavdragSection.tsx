@@ -27,7 +27,7 @@ const RotavdragSection = () => {
       <div className="max-page-width flex flex-col gap-12 px-4 py-12 md:flex-row md:gap-16 md:py-24 lg:gap-32">
         <div className={twMerge("flex basis-8/12 flex-col gap-12 md:gap-24")}>
           <div className="flex flex-col gap-6 md:gap-8">
-            <h3 className="text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
+            <h3 className="text-3xl font-medium tracking-wide md:text-4xl">
               Vad innebär ROT-avdraget?
             </h3>
             <p className="whitespace-pre-line text-base md:text-lg">
@@ -69,7 +69,7 @@ const RotavdragSection = () => {
         </div>
         <div className="w-full basis-4/12 md:relative">
           <div className="flex flex-col gap-6 md:sticky md:top-24 md:gap-8">
-            <h3 className="text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
+            <h3 className="text-3xl font-medium tracking-wide md:text-4xl">
               Resultat
             </h3>
             <p className="whitespace-pre-line text-base md:text-lg">

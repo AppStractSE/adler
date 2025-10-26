@@ -1,8 +1,12 @@
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, Josefin_Sans } from "next/font/google";
 
-const DMSans = DM_Sans({
-  variable: "--font-DM_Sans",
+export const DMSans = DM_Sans({
+  variable: "--font-dm-sans",
   subsets: ["latin"],
 });
 
-export { DMSans };
+export const JosefinSans = Josefin_Sans({
+  variable: "--font-josefin-sans",
+  subsets: ["latin"],
+  weight: "variable",
+});
