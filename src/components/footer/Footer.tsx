@@ -16,8 +16,8 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-background">
       <div className="max-page-width flex flex-col gap-8 px-4 pb-8 pt-32 md:gap-16">
-        <div className="flex flex-wrap items-start gap-12 md:gap-24">
-          <div className="flex flex-col gap-4">
+        <div className="flex flex-wrap gap-12 md:gap-24">
+          <div className="flex w-full flex-col gap-4 lg:w-auto">
             <Link href="/" className="relative block h-auto w-32 md:w-64">
               <Image
                 priority
@@ -46,7 +46,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <div className="flex min-w-fit flex-col gap-8">
+          <div className="flex min-w-fit flex-col gap-4">
             <h5 className="text-base">Snabblänkar</h5>
             <div className="flex flex-col gap-4">
               {footerlinks.map((link) => (
@@ -60,9 +60,9 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className="flex min-w-fit flex-col gap-8">
+          <div className="flex min-w-fit flex-col gap-4">
             <h5 className="text-base">Tjänster</h5>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col justify-end gap-4">
               {content.services.map((link) => (
                 <Link
                   key={link.id}
@@ -74,7 +74,7 @@ const Footer = () => {
               ))}
             </div>
           </div>
-          <div className="flex min-w-fit flex-col gap-8">
+          <div className="flex min-w-fit flex-col gap-4">
             <h5 className="text-base">Följ oss</h5>
             <div className="flex flex-col gap-2">
               {socials.map((social) => (
