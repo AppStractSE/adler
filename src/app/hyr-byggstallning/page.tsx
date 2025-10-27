@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "Adler Byggservice",
     images: [
       {
-        url: "/image006.webp",
+        url: "/byggstallning.jpg",
         width: 1200,
         height: 630,
         alt: "Adler Byggservice | Hyr byggställning",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: "Adler Byggservice",
     images: [
       {
-        url: "/image006.webp",
+        url: "/byggstallning.jpg",
         width: 1200,
         height: 630,
         alt: "Adler Byggservice - Hyr byggställning",

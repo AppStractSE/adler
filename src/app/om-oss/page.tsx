@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Adler Byggservice",
     images: [
       {
-        url: "/image006.webp",
+        url: "/Tjänster-kök.jpeg",
         width: 1200,
         height: 630,
         alt: "Adler Byggservice | Om oss",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "Adler Byggservice",
     images: [
       {
-        url: "/image006.webp",
+        url: "/Tjänster-kök.jpeg",
         width: 1200,
         height: 630,
         alt: "Adler Byggservice - Om oss",
@@ -64,7 +64,7 @@ export default function Page() {
       />
       <TwoPaneSection
         className="border-b border-neutral-300"
-        image="/image006.webp"
+        image="/Tjänster-kök.jpeg"
         title="Våra värderingar"
         text={`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi odit magni, asperiores harum dolor in blanditiis odio consequuntur nostrum deserunt quo reiciendis eos? Ipsam voluptatibus eius alias laborum ducimus eos?`}
       />

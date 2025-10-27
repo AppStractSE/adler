@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     siteName: "Adler Byggservice",
     images: [
       {
-        url: "/image006.webp",
+        url: "/rotavdrag.jpg",
         width: 1200,
         height: 630,
         alt: "Adler Byggservice | Rotavdrag",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Adler Byggservice",
     images: [
       {
-        url: "/image006.webp",
+        url: "/rotavdrag.jpg",
         width: 1200,
         height: 630,
         alt: "Adler Byggservice - Rotavdrag",
