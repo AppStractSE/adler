@@ -17,7 +17,7 @@ const SubPageHeroSection = ({ title, text, image, className }: Props) => {
     <section
       className={twMerge(
         className,
-        "relative flex min-h-[50vh] items-end justify-start bg-neutral-800 py-6 md:py-12 md:min-h-[75vh]",
+        "relative flex min-h-[50vh] items-end justify-start bg-neutral-800 py-6 md:min-h-[75vh] md:py-12",
       )}
     >
       {image ? (
@@ -33,14 +33,14 @@ const SubPageHeroSection = ({ title, text, image, className }: Props) => {
       <div className="absolute inset-0 bg-primary/50"></div>
       <div
         className={twMerge(
-          "max-page-width relative flex flex-col gap-2 md:gap-4 px-4 text-background transition-all duration-500 ease-in-out",
+          "max-page-width relative flex flex-col gap-2 px-4 text-background transition-all duration-500 ease-in-out md:gap-4",
           isMounted ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0",
         )}
       >
         <h4 className="text-balance text-lg font-medium md:text-xl lg:w-1/2">
           {title}
         </h4>
-        <p className="text-balance text-xl font-medium tracking-wide md:text-4xl lg:w-1/2">
+        <p className="text-balance text-xl font-medium tracking-wide md:text-4xl lg:w-1/2 lg:text-5xl">
           {text}
         </p>
       </div>

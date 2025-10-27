@@ -36,7 +36,7 @@ const HeroSection = ({ className }: Props) => {
             <h2 className="whitespace-pre-line text-lg font-medium text-background sm:text-balance">
               Er lokala byggpartner i Skaraborg
             </h2>
-            <h1 className="whitespace-pre-line text-balance text-2xl font-medium text-background md:text-4xl">
+            <h1 className="whitespace-pre-line text-balance text-2xl font-medium text-background md:text-4xl lg:text-5xl">
               Vi hjälper privatpersoner, företag och föreningar med allt från
               renoveringar och tillbyggnader till takarbeten och specialprojekt.
             </h1>

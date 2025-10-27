@@ -26,7 +26,7 @@ const Range = ({
           {title}
         </h6>
         <p className="text-xs opacity-60 md:text-sm">{description}</p>
-        <p className="mt-2 w-1/2 border-b pb-2 text-2xl md:mt-4 md:w-full md:text-4xl">
+        <p className="mt-2 w-1/2 border-b pb-2 text-2xl md:mt-4 md:w-full md:text-4xl lg:text-5xl">
           {value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} {suffix}
         </p>
       </div>

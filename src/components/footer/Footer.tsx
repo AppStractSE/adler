@@ -7,10 +7,11 @@ import Link from "next/link";
 const Footer = () => {
   const footerlinks = [
     // { name: "Tidigare projekt", href: "/projekt" },
-    { name: "Om Adler Byggservice", href: "/om-oss" },
     { name: "Våra tjänster", href: "/vara-tjanster" },
-    { name: "Räkna ut rotavdrag", href: "/rotavdrag" },
+    { name: "Hyr byggställning", href: "/hyr-byggstallning" },
     { name: "Offertförfrågan", href: "/offertforfragan" },
+    { name: "Räkna ut rotavdrag", href: "/rotavdrag" },
+    { name: "Om Adler Byggservice", href: "/om-oss" },
   ];
   const currentYear = new Date().getFullYear();
   return (

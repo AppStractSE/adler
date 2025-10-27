@@ -11,13 +11,14 @@ export interface DrawerLink {
 const mainLinks: DrawerLink[] = [
   { href: "/", label: "Hem" },
   // { href: "/projekt", label: "Projekt" },
-  { href: "/om-oss", label: "Om oss" },
   {
     href: "/vara-tjanster",
     label: "Våra tjänster",
   },
-  { href: "/rotavdrag", label: "Rotavdrag" },
+  { href: "/hyr-byggstallning", label: "Hyr byggställning" },
   { href: "/offertforfragan", label: "Offertförfrågan" },
+  { href: "/rotavdrag", label: "Rotavdrag" },
+  { href: "/om-oss", label: "Om oss" },
 ];
 
 const serviceLinks = content.services.map((service) => ({
