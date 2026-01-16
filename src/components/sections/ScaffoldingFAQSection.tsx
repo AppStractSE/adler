@@ -29,7 +29,7 @@ const ScaffoldingFAQSection = () => {
     },
     {
       question: "Hur går jag tillväga för att hyra en byggställning?",
-      answer: "Kontakta oss för att diskutera dina behov och få en offert.",
+      answer: "Fyll i formuläret så kontaktar vi dig.",
     },
   ];
   return (
