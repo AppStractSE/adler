@@ -73,7 +73,7 @@ const ScaffoldingForm = () => {
   };
 
   const baseClasses =
-    "text-base w-full px-4 py-2.5 border-primary/25 shadow-sm rounded-sm focus:outline-none borderst ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
+    "text-base w-full px-4 py-2.5 border-primary/25 shadow-sm rounded-sm focus:outline-none border ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
 
   const errorClass =
     "outline outline-1 outline-offset-0 outline-red-500 placeholder:text-red-500";
