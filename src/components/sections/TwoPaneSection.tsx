@@ -28,7 +28,7 @@ const TwoPaneSection = ({
     <section className={className}>
       <div className="max-page-width grid grid-cols-1 items-center justify-between gap-6 px-4 py-12 md:gap-8 md:py-24 lg:grid-cols-2 lg:gap-24">
         <div className={twMerge("flex flex-col gap-4 md:gap-6 lg:gap-8")}>
-          <h3 className="text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
+          <h3 className="text-3xl font-medium md:text-4xl lg:text-5xl">
             {title}
           </h3>
           <p className="whitespace-pre-line text-base md:text-lg">{text}</p>

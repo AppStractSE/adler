@@ -19,7 +19,7 @@ interface MainLinksProps {
 
 const MainLinks = ({ currentPath }: MainLinksProps) => {
   return (
-    <nav className="flex flex-col gap-0 text-xl tracking-wide">
+    <nav className="flex flex-col gap-0 text-xl">
       {mainLinks.map((mainLink: DrawerLink) => {
         const isHome = mainLink.href === "/" && currentPath === `/`;
         const isMainActive = isHome || currentPath === mainLink.href;
@@ -111,9 +111,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
           <MainLinks currentPath={pathname} />
           <hr className="border-stone-300" />
           <div className="flex flex-col gap-4 px-4">
-            <h6 className="text-lg tracking-wide md:text-xl">
-              Upptäck våra tjänster
-            </h6>
+            <h6 className="text-lg md:text-xl">Upptäck våra tjänster</h6>
             <div className="grid grid-cols-2 gap-2">
               {serviceLinks.map((serviceLink) => (
                 <Link
@@ -156,9 +154,7 @@ const Drawer = ({ isOpen, setIsOpen }: Props) => {
           </div>
           <hr className="border-stone-300" />
           <div className="flex flex-col gap-4 px-4">
-            <h6 className="text-lg tracking-wide md:text-xl">
-              {content.followUs}
-            </h6>
+            <h6 className="text-lg md:text-xl">{content.followUs}</h6>
             <div className="flex flex-col gap-4">
               {socials.map((social) => (
                 <a

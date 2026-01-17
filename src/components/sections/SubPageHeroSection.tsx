@@ -40,7 +40,7 @@ const SubPageHeroSection = ({ title, text, image, className }: Props) => {
         <h4 className="text-balance text-lg font-medium md:text-xl lg:w-1/2">
           {title}
         </h4>
-        <p className="text-balance text-xl font-medium tracking-wide md:text-4xl lg:w-1/2 lg:text-5xl">
+        <p className="text-balance text-xl font-medium md:text-4xl lg:w-1/2 lg:text-5xl">
           {text}
         </p>
       </div>
