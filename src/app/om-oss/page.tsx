@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Adler Byggservice | Om oss",
     description:
-      "Välkommen till Adler Byggservice – din lokala expert på el och automation i Lindesberg.",
+      "Lär känna Adler Byggservice – ett lokalt byggföretag i Skara med fokus på kvalitet, hållbarhet och pålitlighet.",
     url: "/om-oss",
     siteName: "Adler Byggservice",
     images: [
@@ -26,17 +26,17 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@",
-    title: "Adler Byggservice",
+    title: "Adler Byggservice | Om oss",
     images: [
       {
         url: "/Tjänster-kök.jpeg",
         width: 1200,
         height: 630,
-        alt: "Adler Byggservice - Om oss",
+        alt: "Adler Byggservice | Om oss",
       },
     ],
     description:
-      "Välkommen till Adler Byggservice – din lokala expert på el och automation i Lindesberg.",
+      "Adler Byggservice är din lokala byggpartner i Skara och Skaraborg.",
   },
 };
 
@@ -45,14 +45,15 @@ export default function Page() {
     <>
       <SubPageHeroSection
         title="Om oss"
-        text="Vi är ett litet byggteam med stort engagemang."
+        text="Vi är ett lokalt byggteam med stort engagemang."
+        image="/hero-image.webp"
       />
       <CenteredSection className="border-b border-neutral-300">
         <h2 className="text-center text-3xl font-medium md:text-4xl lg:text-5xl">
-          Er byggpartner i Skara
+          Er byggpartner i Skara och Skaraborg
         </h2>
         <p className="max-w-screen-md whitespace-pre-line text-balance text-center text-base md:text-lg">
-          {`Välkommen till Adler Byggservice – Er lokala byggpartner i Skara. Inget jobb är för stort eller för litet för oss. Vi erbjuder allt från renoveringar och ombyggnationer till nybyggnationer och tillbyggnader, både inne och ute. Vår passion är att skapa hållbara och funktionella lösningar som möter era behov och önskemål.\n\nVi är stolta över att vara en del av Skara-samhället och ser fram emot att hjälpa er med ert nästa byggprojekt.`}
+          {`Adler Byggservice är ett byggföretag med bas i Skara, men vi arbetar över hela Skaraborg. Sedan starten 2011 har vi hjälpt privatpersoner, företag och föreningar med allt inom bygg och renovering – från mindre arbeten till större projekt.\n\nVi lägger stor vikt vid tydlig kommunikation, god planering och ett slutresultat som håller över tid. Oavsett uppdrag kan du känna dig trygg med att vi tar ansvar hela vägen, från första kontakt till färdigt arbete.`}
         </p>
       </CenteredSection>
       <TwoPaneSection
@@ -60,13 +61,13 @@ export default function Page() {
         className="border-b border-neutral-300"
         image="/adler-byggservice.png"
         title="Vår historia"
-        text={`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi odit magni, asperiores harum dolor in blanditiis odio consequuntur nostrum deserunt quo reiciendis eos? Ipsam voluptatibus eius alias laborum ducimus eos?`}
+        text={`Företaget startades 2011 med en tydlig vision: att erbjuda pålitliga byggtjänster och skapa långsiktiga relationer med våra kunder. Idag är vi fem anställda med en samlad erfarenhet på över 120 år inom byggbranschen.\n\nGenom åren har vi haft förmånen att arbeta med många olika typer av projekt runt om i Skaraborg. Att en stor del av våra uppdrag kommer via rekommendationer ser vi som ett kvitto på vårt engagemang och vår kvalitet.`}
       />
       <TwoPaneSection
         className="border-b border-neutral-300"
-        image="/Tjänster-kök.jpeg"
+        image="/20231221_130143.jpg"
         title="Våra värderingar"
-        text={`Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi odit magni, asperiores harum dolor in blanditiis odio consequuntur nostrum deserunt quo reiciendis eos? Ipsam voluptatibus eius alias laborum ducimus eos?`}
+        text={`Kvalitet, hållbarhet och pålitlighet är grunden i allt vi gör. Vi tror på att hålla vad vi lovar, vara punktliga och lyhörda samt att alltid arbeta med respekt för både kund och hem.\n\nVår vision har varit densamma sedan start – att bygga goda relationer genom ärlighet och ett personligt bemötande. Vårt motto sammanfattar det bäst: Då vi är gäster i kundens hem ska vi utföra arbetet med respekt.`}
       />
       <ServicesSection />
     </>

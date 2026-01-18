@@ -49,7 +49,7 @@ export const content = {
       description: "Vi utför takbyten, omläggning och reparation av tak.",
       video: "/takrenovering.mp4",
       image: "/20210928_154706.jpg",
-      image_alternative: "/Tjänster-takarbeten.jpg",
+      image_alternative: "/20210928_154706.jpg",
     },
     {
       id: "kok",
