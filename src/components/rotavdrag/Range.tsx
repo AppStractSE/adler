@@ -22,9 +22,7 @@ const Range = ({
   return (
     <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-center lg:gap-24">
       <div className="flex basis-8/12 flex-col gap-2">
-        <h6 className="text-lg font-medium tracking-wide md:text-xl">
-          {title}
-        </h6>
+        <h6 className="text-lg font-medium md:text-xl">{title}</h6>
         <p className="text-xs opacity-60 md:text-sm">{description}</p>
         <p className="mt-2 w-1/2 border-b pb-2 text-2xl md:mt-4 md:w-full md:text-4xl lg:text-5xl">
           {value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")} {suffix}

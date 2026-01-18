@@ -1,79 +1,38 @@
 "use client";
 import Spinner from "@/components/loaders/Spinner";
-import { IContactForm } from "@/types/IContactForm";
-import { useRouter, useSearchParams } from "next/navigation"; // Import useSearchParams from next/navigation
-import { useEffect, useState } from "react";
+import { IScaffoldingForm } from "@/types/IScaffoldingForm";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import toast from "react-hot-toast";
 import { twMerge } from "tailwind-merge";
 
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { content } from "@/data/content";
-
 const ScaffoldingForm = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const router = useRouter();
-  const searchParams = useSearchParams(); // Initialize useSearchParams
   const {
     register,
     handleSubmit,
     reset,
-    setValue,
-    watch,
     formState: { errors, isSubmitting },
   } = useForm({
     defaultValues: {
       FullName: "",
       Email: "",
       PhoneNumber: "",
-      Service: "",
       Message: "",
     },
     mode: "onTouched",
   });
 
-  useEffect(() => {
-    const query = searchParams.get("s");
-    if (query) {
-      const service = content.services.find((service) => service.id === query);
-      if (service) {
-        setValue("Service", service.title, { shouldValidate: true });
-        console.log(
-          "Set Service to:",
-          service.title,
-          "Current value:",
-          watch("Service"),
-        );
-      }
-    }
-  }, [searchParams, setValue, watch]);
-
-  const handleServiceChange = (value: string) => {
-    setValue("Service", value, { shouldValidate: true });
-    const newUrl = new URL(window.location.href);
-    newUrl.searchParams.delete("s");
-    router.replace(newUrl.pathname + newUrl.search, { scroll: false });
-  };
-
-  function generateEmailHTML(data: IContactForm) {
+  function generateEmailHTML(data: IScaffoldingForm) {
     const formattedMessage = data.Message.replace(/\n/g, "<br>");
-    return `<div><p><strong>Namn:</strong></p><p>${data.FullName}</p><p><strong>Email:</strong></p><p><a href="mailto:${data.Email}">${data.Email}</a></p><p><strong>Telefon:</strong></p><p><a href="tel:${data.PhoneNumber}">${data.PhoneNumber}</a></p><p><strong>Intresserad av tjänst:</strong></p><p>${data.Service}</p><p><strong>Meddelande:</strong></p><p>${formattedMessage}</p></div>`;
+    return `<div><p><strong>Namn:</strong></p><p>${data.FullName}</p><p><strong>Email:</strong></p><p><a href="mailto:${data.Email}">${data.Email}</a></p><p><strong>Telefon:</strong></p><p><a href="tel:${data.PhoneNumber}">${data.PhoneNumber}</a></p><p><strong>Meddelande:</strong></p><p>${formattedMessage}</p></div>`;
   }
 
-  const onSubmit = async (data: IContactForm) => {
+  const onSubmit = async (data: IScaffoldingForm) => {
     const formData = {
       name: data.FullName,
       email: data.Email,
-      service: data.Service,
-      subject: `Kontaktformulär - ${data.FullName}`,
+      subject: `Hyra byggställning - ${data.FullName}`,
       message: data.Message,
       messageHtml: generateEmailHTML(data),
     };
@@ -114,12 +73,12 @@ const ScaffoldingForm = () => {
   };
 
   const baseClasses =
-    "text-base w-full px-4 py-2.5 border-primary/25 shadow-sm rounded-sm focus:outline-none border tracking-widest ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
+    "text-base w-full px-4 py-2.5 border-primary/25 shadow-sm rounded-sm focus:outline-none border ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
 
   const errorClass =
     "outline outline-1 outline-offset-0 outline-red-500 placeholder:text-red-500";
   const errorTextBaseClass =
-    "text-red-500 text-xs font-medium tracking-widest transition-all duration-500 ease-in-out";
+    "text-red-500 text-xs font-mediumst transition-all duration-500 ease-in-out";
   const errorTextHiddenClasses = "opacity-0 max-h-0 ";
   const errorTextVisibleClasses = "my-2 opacity-100 max-h-full";
 
@@ -165,7 +124,6 @@ const ScaffoldingForm = () => {
             {errors.FullName?.message}
           </p>
         </div>
-
         <div className="flex flex-col gap-2">
           <label className="text-base" htmlFor="Email">
             E-postadress
@@ -236,55 +194,12 @@ const ScaffoldingForm = () => {
             {errors.PhoneNumber?.message}
           </p>
         </div>
-
-        <div className="flex flex-col gap-2">
-          <label className="text-base" htmlFor="Service">
-            Tjänst
-          </label>
-          <Select
-            key={watch("Service")}
-            onValueChange={handleServiceChange}
-            value={watch("Service") || ""}
-          >
-            <SelectTrigger
-              className={twMerge(
-                baseClasses,
-                "rounded-sm bg-white",
-                errors["Service"] ? errorClass : "",
-              )}
-            >
-              <SelectValue placeholder="Vad behöver du hjälp med?" />
-            </SelectTrigger>
-            <SelectContent className="rounded-sm bg-white">
-              <SelectGroup>
-                <SelectLabel>Välj en tjänst</SelectLabel>
-                {content.services.map((service) => (
-                  <SelectItem value={service.title} key={service.id}>
-                    {service.title}
-                  </SelectItem>
-                ))}
-                <SelectItem value="Annat">Annat</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-          <p
-            role="alert"
-            className={twMerge(
-              errorTextBaseClass,
-              errors["Service"]
-                ? errorTextVisibleClasses
-                : errorTextHiddenClasses,
-            )}
-          >
-            {errors.Service?.message}
-          </p>
-        </div>
-
         <div className="flex flex-col gap-2">
           <label className="text-base" htmlFor="Message">
             Meddelande
           </label>
           <textarea
+            placeholder="Fyll i hur länge du behöver ställningen, var den ska användas och eventuella andra detaljer."
             maxLength={500}
             className={twMerge(
               "h-64 resize-none whitespace-pre-line",

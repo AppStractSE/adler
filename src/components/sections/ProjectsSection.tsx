@@ -20,10 +20,10 @@ const ProjectsSection = ({ className }: Props) => {
   return (
     <section className={className}>
       <div className="max-page-width flex flex-col items-center gap-4 px-4 py-12 md:gap-8 md:py-24">
-        <h2 className="text-balance text-center text-3xl font-medium tracking-wide sm:text-4xl md:text-4xl lg:text-5xl">
+        <h2 className="text-balance text-center text-3xl font-medium sm:text-4xl md:text-4xl lg:text-5xl">
           Placeholder
         </h2>
-        <p className="max-w-3xl text-balance text-center text-lg leading-loose tracking-wider md:text-xl">
+        <p className="leading-looser max-w-3xl text-balance text-center text-lg md:text-xl">
           Placeholder
         </p>
         <div className="grid w-full grid-cols-1 grid-rows-1 items-start gap-4 md:grid-cols-2 md:gap-6 lg:gap-8">

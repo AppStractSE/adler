@@ -49,7 +49,7 @@ export default function Page() {
         image="/hero-image001.webp"
       />
       <CenteredSection className="overflow-hidden border-b">
-        <h2 className="text-center text-3xl font-medium tracking-wide md:text-4xl lg:text-5xl">
+        <h2 className="text-center text-3xl font-medium md:text-4xl lg:text-5xl">
           Nyfiken på vad vi kan göra?
         </h2>
         <p className="max-w-screen-md whitespace-pre-line text-balance text-center text-base md:text-lg">

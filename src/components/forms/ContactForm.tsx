@@ -114,12 +114,12 @@ const ContactForm = () => {
   };
 
   const baseClasses =
-    "text-base w-full px-4 py-2.5 border-primary/25 shadow-sm rounded-sm focus:outline-none border tracking-widest ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
+    "text-base w-full px-4 py-2.5 border-primary/25 shadow-sm rounded-sm focus:outline-none border ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
 
   const errorClass =
     "outline outline-1 outline-offset-0 outline-red-500 placeholder:text-red-500";
   const errorTextBaseClass =
-    "text-red-500 text-xs font-medium tracking-widest transition-all duration-500 ease-in-out";
+    "text-red-500 text-xs font-mediumst transition-all duration-500 ease-in-out";
   const errorTextHiddenClasses = "opacity-0 max-h-0 ";
   const errorTextVisibleClasses = "my-2 opacity-100 max-h-full";
 

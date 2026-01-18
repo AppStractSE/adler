@@ -37,7 +37,7 @@ const Header = () => {
   }, [pathname]);
 
   const buttonBaseClasses = twMerge(
-    "px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm rounded-sm hover:bg-neutral-600/75 hover:text-background hover:shadow tracking-wide font-medium transition-all duration-100 ease-in-out",
+    "px-4 py-2 md:px-6 md:py-2.5 text-xs md:text-sm rounded-sm hover:bg-neutral-600/75 hover:text-background hover:shadow font-medium transition-all duration-100 ease-in-out",
     isScrolled ? "" : "",
   );
 
@@ -56,7 +56,7 @@ const Header = () => {
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
               <button
-                className={twMerge(buttonBaseClasses, "!p-2 -m-2")}
+                className={twMerge(buttonBaseClasses, "-m-2 !p-2")}
                 onClick={() => setIsDrawerOpen(!isDrawerOpen)}
               >
                 <MenuIcon size={ICON_SIZE} />
