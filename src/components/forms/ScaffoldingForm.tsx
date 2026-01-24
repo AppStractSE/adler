@@ -201,7 +201,7 @@ const ScaffoldingForm = () => {
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-base" htmlFor="Dimensions">
-            Dimensioner på ställningen (i m)
+            Dimensioner på fasad (i m)
           </label>
           <div className="flex items-center gap-2">
             <div className="flex flex-col gap-2">
