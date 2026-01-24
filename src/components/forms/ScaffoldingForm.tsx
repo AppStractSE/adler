@@ -19,13 +19,18 @@ const ScaffoldingForm = () => {
       Email: "",
       PhoneNumber: "",
       Message: "",
+      Dimensions: {
+        Width: null,
+        Height: null,
+        Length: null,
+      },
     },
     mode: "onTouched",
   });
 
   function generateEmailHTML(data: IScaffoldingForm) {
     const formattedMessage = data.Message.replace(/\n/g, "<br>");
-    return `<div><p><strong>Namn:</strong></p><p>${data.FullName}</p><p><strong>Email:</strong></p><p><a href="mailto:${data.Email}">${data.Email}</a></p><p><strong>Telefon:</strong></p><p><a href="tel:${data.PhoneNumber}">${data.PhoneNumber}</a></p><p><strong>Meddelande:</strong></p><p>${formattedMessage}</p></div>`;
+    return `<div><p><strong>Namn:</strong></p><p>${data.FullName}</p><p><strong>Email:</strong></p><p><a href="mailto:${data.Email}">${data.Email}</a></p><p><strong>Telefon:</strong></p><p><a href="tel:${data.PhoneNumber}">${data.PhoneNumber}</a></p><p><strong>Dimensioner (B x H x L):</strong></p><p>${data.Dimensions ? `${data.Dimensions.Width}m x ${data.Dimensions.Height}m x ${data.Dimensions.Length}m` : "Mått ej ifyllt"}</p><p><strong>Meddelande:</strong></p><p>${formattedMessage}</p></div>`;
   }
 
   const onSubmit = async (data: IScaffoldingForm) => {
@@ -73,14 +78,14 @@ const ScaffoldingForm = () => {
   };
 
   const baseClasses =
-    "text-base w-full px-4 py-2.5 border-primary/25 shadow-sm rounded-sm focus:outline-none border ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
+    "text-base w-full px-2 py-2.5 border-primary/25 shadow-sm rounded-sm focus:outline-none border ring-0 focus:outline-1 focus:border-primary focus-visible:outline-offset-0 transition-all duration-500 ease-in-out";
 
   const errorClass =
     "outline outline-1 outline-offset-0 outline-red-500 placeholder:text-red-500";
   const errorTextBaseClass =
     "text-red-500 text-xs font-mediumst transition-all duration-500 ease-in-out";
   const errorTextHiddenClasses = "opacity-0 max-h-0 ";
-  const errorTextVisibleClasses = "my-2 opacity-100 max-h-full";
+  const errorTextVisibleClasses = "opacity-100 max-h-full";
 
   return (
     <div className="relative">
@@ -92,7 +97,7 @@ const ScaffoldingForm = () => {
         <input type="hidden" name="required-field" value="contact-form" />
         <div className="flex flex-col gap-2">
           <label className="text-base" htmlFor="FullName">
-            För- och efternamn
+            För- och efternamn *
           </label>
           <input
             className={twMerge(
@@ -126,7 +131,7 @@ const ScaffoldingForm = () => {
         </div>
         <div className="flex flex-col gap-2">
           <label className="text-base" htmlFor="Email">
-            E-postadress
+            E-postadress *
           </label>
           <input
             className={twMerge(baseClasses, errors["Email"] ? errorClass : "")}
@@ -155,7 +160,7 @@ const ScaffoldingForm = () => {
 
         <div className="flex flex-col gap-2">
           <label className="text-base" htmlFor="PhoneNumber">
-            Telefonnummer
+            Telefonnummer *
           </label>
           <input
             className={twMerge(
@@ -195,8 +200,84 @@ const ScaffoldingForm = () => {
           </p>
         </div>
         <div className="flex flex-col gap-2">
+          <label className="text-base" htmlFor="Dimensions">
+            Dimensioner på ställningen (i m)
+          </label>
+          <div className="flex items-center gap-2">
+            <div className="flex flex-col gap-2">
+              <label className="text-sm" htmlFor="Dimensions.Width">
+                Bredd
+              </label>
+              <div className="relative">
+                <span className="absolute right-2 top-1/2 -translate-y-1/2 text-sm opacity-50">
+                  m
+                </span>
+                <input
+                  type="text"
+                  className={twMerge(baseClasses, "w-full")}
+                  {...register("Dimensions.Width", {
+                    onChange: (e) => {
+                      e.target.value = e.target.value
+                        .replace(/[^0-9.,]/g, "")
+                        .replace(/^(.*[.,])([.,].*)$/, "$1")
+                        .replace(/([.,]\d{2}).+$/, "$1");
+                    },
+                  })}
+                />
+              </div>
+            </div>
+            <span className="translate-y-1/2 opacity-75">x</span>
+            <div className="flex flex-col gap-2">
+              <label className="text-sm" htmlFor="Dimensions.Height">
+                Höjd
+              </label>
+              <div className="relative">
+                <span className="absolute right-2 top-1/2 -translate-y-1/2 text-sm opacity-50">
+                  m
+                </span>
+                <input
+                  type="text"
+                  className={twMerge(baseClasses, "w-full")}
+                  {...register("Dimensions.Height", {
+                    onChange: (e) => {
+                      e.target.value = e.target.value
+                        .replace(/[^0-9.,]/g, "")
+                        .replace(/^(.*[.,])([.,].*)$/, "$1")
+                        .replace(/([.,]\d{2}).+$/, "$1");
+                    },
+                  })}
+                />
+              </div>
+            </div>
+            <span className="translate-y-1/2 opacity-75">x</span>
+            <div className="flex flex-col gap-2">
+              <label className="text-sm" htmlFor="Dimensions.Length">
+                Längd
+              </label>
+              <div className="relative">
+                <span className="absolute right-2 top-1/2 -translate-y-1/2 text-sm opacity-50">
+                  m
+                </span>
+                <input
+                  type="text"
+                  className={twMerge(baseClasses, "w-full")}
+                  {...register("Dimensions.Length", {
+                    onChange: (e) => {
+                      e.target.value = e.target.value
+                        .replace(/[^0-9.,]/g, "")
+                        .replace(/^(.*[.,])([.,].*)$/, "$1")
+                        .replace(/([.,]\d{2}).+$/, "$1");
+                    },
+                  })}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-col gap-2">
           <label className="text-base" htmlFor="Message">
-            Meddelande
+            Meddelande *
           </label>
           <textarea
             placeholder="Fyll i hur länge du behöver ställningen, var den ska användas och eventuella andra detaljer."
@@ -234,7 +315,7 @@ const ScaffoldingForm = () => {
         <button
           disabled={isSubmitting || formSubmitted}
           type="submit"
-          className="inline-flex w-full items-center justify-center rounded-sm bg-primary/90 px-4 py-4 text-background ring-1 ring-background backdrop-blur-sm hover:bg-primary"
+          className="mt-2 inline-flex w-full items-center justify-center rounded-sm bg-primary/90 px-4 py-4 text-background ring-1 ring-background backdrop-blur-sm hover:bg-primary"
         >
           {isSubmitting ? (
             <Spinner
